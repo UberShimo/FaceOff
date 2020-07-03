@@ -1,0 +1,1 @@
+image_index = Match_Controller_Obj.P2_score;

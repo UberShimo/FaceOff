@@ -1,0 +1,1 @@
+instance_create_depth(x, y, -3, Blood_Eff_Obj);

@@ -1,0 +1,51 @@
+GAME NAME: Face off
+
+TODO:
+Test to use global.P1_Attack_isPressed / isHeld / isReleased instead?
+Optimize the stance switching for Katana. Check if action = "Eagle or Viper or Tiger" and check if Special is pressed instead of making stance switch within every stance.
+
+Fix so you cant touch OutOfBounds by doing an attack through opponent.
+Fix so you stand still after killing opponent no matter what.
+Fix Scythe Healthbar after suiciding with Sf.
+Fix Scythe Ab so it launch correct.
+Fix death animation when killed by bleed.
+
+Room size: 256 x 128
+
+Hitbox types:
+High
+Low
+Descending
+Alternate
+
+
+Hurtbox fixDuring animation with ducking and jumping properties:
+mask_index = jump_sprite / stand_sprite / duck_sprite;
+
+
+HitBox = 8 X 24
+
+Ranges:
+(from center of sprite) + 
+A = > 40
+B = 24 - 40
+C = < 24
+
+FRAMES \V/
+Sprite speed shall be 30!
+
+(Rarely used)
+
+Rise: 16
+
+start:
+10 / 16 / 24 / (32)
+
+recovery:
+(16) / 24 / 32 / 40
+
+hitStun:
+(20) / 28 / 36 / Launch
+
+blockStun:
+(12) / 20 / 28 / 36

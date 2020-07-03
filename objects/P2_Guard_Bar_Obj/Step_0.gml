@@ -1,0 +1,1 @@
+image_xscale = -(Player2_Obj.guard/Player2_Obj.maxGuard);

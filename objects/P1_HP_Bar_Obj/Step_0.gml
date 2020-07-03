@@ -1,0 +1,1 @@
+image_xscale = Player1_Obj.HP / 100;

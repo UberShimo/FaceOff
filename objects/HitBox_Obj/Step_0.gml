@@ -1,0 +1,2 @@
+hitStun--;
+blockStun--;
