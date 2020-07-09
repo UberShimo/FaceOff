@@ -57,10 +57,10 @@ else if(action == "Sb"){
 	instance_create_depth(x, y, 0, Scythe_Bird_P1_Obj);
 }
 else if(action == "Sd"){
-	if(keyboard_check(global.P1_Forward)){
+	if(Forward_Check){
 		instance_create_depth(Player2_Obj.x + 14, Player2_Obj.y, -4, Scythe_AssScratcher_P1_Obj);
 	}
-	else if(keyboard_check(global.P1_Backward)){
+	else if(Backward_Check){
 		instance_create_depth(Player2_Obj.x - 26, Player2_Obj.y, -4, Scythe_AssScratcher_P1_Obj);
 	}
 	else{

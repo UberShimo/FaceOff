@@ -10,7 +10,7 @@ if(aerial){
 	aerial = false;
 }
 else{
-	if(keyboard_check(global.P2_Down)){
+	if(Down_Check){
 		ducking = true;
 		sprite_index = Knives_Duck_Spr;
 		mask_index = Duck_Hurtbox_Spr;

@@ -107,7 +107,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Au";
 			hspeed = ms;
 		
@@ -161,7 +161,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Su";
 		
 			sprite_index = Claws_Su_Spr;

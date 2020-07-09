@@ -1,16 +1,40 @@
+// CONTROLS
+Forward_Check = keyboard_check(ord("D")) || gamepad_button_check(0, gp_padr);
+Forward_Pressed = keyboard_check_pressed(ord("D")) || gamepad_button_check_pressed(0, gp_padr);
+Forward_Released = keyboard_check_released(ord("D")) || gamepad_button_check_released(0, gp_padr);
+Backward_Check = keyboard_check(ord("A")) || gamepad_button_check(0, gp_padl);
+Backward_Pressed = keyboard_check_pressed(ord("A")) || gamepad_button_check_pressed(0, gp_padl);
+Backward_Released = keyboard_check_released(ord("A")) || gamepad_button_check_released(0, gp_padl);
+Down_Check = keyboard_check(ord("S")) || gamepad_button_check(0, gp_padd);
+Down_Pressed = keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd);
+Down_Released = keyboard_check_released(ord("S")) || gamepad_button_check_released(0, gp_padd);
+Up_Check = keyboard_check(ord("W")) || gamepad_button_check(0, gp_padu);
+Up_Pressed = keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu);
+Up_Released = keyboard_check_released(ord("W")) || gamepad_button_check_released(0, gp_padu);
+Attack_Check = keyboard_check(ord("B")) || gamepad_button_check(0, gp_face3);
+Attack_Pressed = keyboard_check_pressed(ord("B")) || gamepad_button_check_pressed(0, gp_face3);
+Attack_Released = keyboard_check_released(ord("B")) || gamepad_button_check_released(0, gp_face3);
+Special_Check = keyboard_check(ord("N")) || gamepad_button_check(0, gp_face4);
+Special_Pressed = keyboard_check_pressed(ord("N")) || gamepad_button_check_pressed(0, gp_face4);;
+Special_Released = keyboard_check_released(ord("N")) || gamepad_button_check_released(0, gp_face4);;
+Block_Check = keyboard_check(ord("M")) || gamepad_button_check(0, gp_face1);
+Block_Pressed = keyboard_check_pressed(ord("M")) || gamepad_button_check_pressed(0, gp_face1);
+Block_Released = keyboard_check_released(ord("M")) || gamepad_button_check_released(0, gp_face1);
+
+
 // Buffer activate
-if(keyboard_check(global.P1_Attack)){
+if(Attack_Check){
 	Abuffer = global.bufferAmount;
 }
-else if(keyboard_check(global.P1_Special)){
+else if(Special_Check){
 	Sbuffer = global.bufferAmount;
 }
-if(keyboard_check_pressed(global.P1_Down)){
+if(Down_Pressed){
 	Dbuffer = 16;
 }
 
 // Buffer cancel
-if(keyboard_check_pressed(global.P1_Block)){
+if(Block_Pressed){
 	Abuffer = 0;
 	Sbuffer = 0;
 }

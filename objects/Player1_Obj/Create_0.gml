@@ -1,7 +1,7 @@
 HP = 100;
 guard = 100;
 maxGuard = 100;
-ms = 2; // Movement Speed
+ms = 1.5; // Movement Speed
 
 blocking = false;
 ducking = false;

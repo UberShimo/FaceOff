@@ -1,14 +1,14 @@
 GAME NAME: Face off
 
-TODO:
-Test to use global.P1_Attack_isPressed / isHeld / isReleased instead?
+TODO
 Optimize the stance switching for Katana. Check if action = "Eagle or Viper or Tiger" and check if Special is pressed instead of making stance switch within every stance.
+Crisp Knight Sf up ffs!
 
 Fix so you cant touch OutOfBounds by doing an attack through opponent.
 Fix so you stand still after killing opponent no matter what.
 Fix Scythe Healthbar after suiciding with Sf.
 Fix Scythe Ab so it launch correct.
-Fix death animation when killed by bleed.
+Fix death animation when killed by bleed. Fixed?
 
 Room size: 256 x 128
 
@@ -42,7 +42,7 @@ start:
 10 / 16 / 24 / (32)
 
 recovery:
-(16) / 24 / 32 / 40
+(24) / 32 / 40 / 48
 
 hitStun:
 (20) / 28 / 36 / Launch

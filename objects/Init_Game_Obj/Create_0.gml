@@ -32,28 +32,7 @@ global.bufferAmount = 8;
 global.hitboxDuration = 4;
 global.gravityValue = 0.2;
 
-// Controls
-global.P1_Forward = ord("D");
-global.P1_Backward = ord("A");
-global.P1_Down = ord("S");
-global.P1_Up = ord("W");
-global.P1_Attack = ord("B");
-global.P1_Special = ord("N");
-global.P1_Block = ord("M");
-
-global.P2_Forward = vk_left;
-global.P2_Backward = vk_right;
-global.P2_Down = vk_down;
-global.P2_Up = vk_up;
-global.P2_Attack = vk_numpad1;
-global.P2_Special = vk_numpad2;
-global.P2_Block = vk_numpad3;
-
-global.GP_Down = gp_padd;
-global.GP_Up = gp_padu;
-global.GP_Attack = gp_face3;
-
-
+// Picks
 global.P1_pick = noone;
 global.P2_pick = noone;
 global.CPU_pick = noone;

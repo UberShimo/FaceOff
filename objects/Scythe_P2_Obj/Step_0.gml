@@ -5,7 +5,7 @@ if(global.duelHasStarted){
 	// CONTROLS
 
 	// Forward
-	if(keyboard_check(global.P2_Forward) &&
+	if(Forward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
 		if(x > Player1_Obj.x +10){
 			x += ms;
@@ -15,7 +15,7 @@ if(global.duelHasStarted){
 		mask_index = Stand_Hurtbox_Spr;
 	}
 	// Back
-	else if(keyboard_check(global.P2_Backward) &&
+	else if(Backward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
 		x -= ms;
 	
@@ -29,13 +29,13 @@ if(global.duelHasStarted){
 	}
 
 	// Duck
-	if(keyboard_check(global.P2_Down) && !ducking && action == "none" && !aerial){
+	if(Down_Check && !ducking && action == "none" && !aerial){
 		ducking = true;
 	
 		sprite_index = Scythe_Duck_Spr;
 		mask_index = Duck_Hurtbox_Spr;
 	}
-	else if(keyboard_check_released(global.P2_Down) && ducking && action == "none"){
+	else if(Down_Released && ducking && action == "none"){
 		ducking = false;
 	 
 		sprite_index = Scythe_Stand_Spr;
@@ -43,11 +43,11 @@ if(global.duelHasStarted){
 	}
 
 	// Jump
-	if(keyboard_check(global.P2_Up) && action = "none" && !ducking && !aerial){
-		if(keyboard_check(global.P2_Forward)){
+	if(Up_Check && action = "none" && !ducking && !aerial){
+		if(Forward_Check){
 			hspeed = ms;
 		}
-		else if(keyboard_check(global.P2_Backward)){
+		else if(Backward_Check){
 			hspeed = -ms;
 		}
 	
@@ -58,15 +58,15 @@ if(global.duelHasStarted){
 		sprite_index = Scythe_Jump_Spr;
 		mask_index = Jump_Hurtbox_Spr;
 		image_index = 0;
-		alarm[3] = 6;
+		alarm[3] = 8;
 	}
 
 	// Block
-	if(keyboard_check(global.P2_Block) && 
+	if(Block_Check && 
 	action = "none" && !aerial){
 		blocking = true;
 	
-		if(keyboard_check(global.P2_Down)){
+		if(Down_Check){
 			sprite_index = Scythe_Block_Ducking_Spr;
 			mask_index = Duck_Hurtbox_Spr;
 		}
@@ -75,9 +75,9 @@ if(global.duelHasStarted){
 			mask_index = Stand_Hurtbox_Spr;
 		}
 	}
-	else if(keyboard_check_released(global.P2_Block) &&
+	else if(Block_Released &&
 	action = "none" && !aerial){
-		if(keyboard_check(global.P2_Down)){
+		if(Down_Check){
 			ducking = true;
 			sprite_index = Scythe_Duck_Spr;
 			mask_index = Duck_Hurtbox_Spr;
@@ -94,7 +94,7 @@ if(global.duelHasStarted){
 	if(action == "Hover"){
 		sprite_index = Scythe_Hover_Spr;
 		
-		if(!keyboard_check(global.P2_Up)){
+		if(!Up_Check){
 			action = "none";
 			
 			sprite_index = Scythe_Jump_Spr;
@@ -123,11 +123,11 @@ if(global.duelHasStarted){
 	// Scythe AERIAL MOVEMENT
 	if(aerial){
 		// Forward
-		if(keyboard_check(global.P2_Forward) && hspeed > ms){
+		if(Forward_Check && hspeed > ms){
 			hspeed -= 0.2;
 		}
 		// Back
-		else if(keyboard_check(global.P2_Backward) && hspeed < -ms){
+		else if(Backward_Check && hspeed < -ms){
 			hspeed += 0.2;
 		}
 	}
@@ -148,7 +148,7 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_A;
 			}
-			else if(keyboard_check(global.P2_Forward)){
+			else if(Forward_Check){
 				action = "Af";
 		
 				hspeed = ms / 2;
@@ -158,7 +158,7 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_C;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Ab";
 		
 				sprite_index = Scythe_Ab_Spr;
@@ -192,7 +192,7 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = 1;
 			}
-			else if(keyboard_check(global.P2_Forward)){
+			else if(Forward_Check){
 				action = "Sf";
 		
 				sprite_index = Scythe_Sf_Spr;
@@ -201,11 +201,11 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_B;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Sb";
 		
 				sprite_index = Scythe_Sb_Spr;
-				mask_index = Duck_Hurtbox_Spr;
+				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_B;
@@ -246,10 +246,10 @@ if(global.duelHasStarted){
 	
 	// An cancel
 	if(action == "An1" && image_index < 2){
-		if(keyboard_check(global.P2_Block)){
+		if(Block_Check){
 			action = "none";
 		}
-		else if(keyboard_check(global.P2_Forward)){
+		else if(Forward_Check){
 			action = "Af";
 		
 			hspeed = ms / 2;
@@ -259,7 +259,7 @@ if(global.duelHasStarted){
 			alarm[0] = image_number * 2;
 			alarm[3] = global.startUp_C;
 		}
-		else if(keyboard_check(global.P2_Backward)){
+		else if(Backward_Check){
 			action = "Ab";
 		
 			sprite_index = Scythe_Ab_Spr;

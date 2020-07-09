@@ -57,7 +57,7 @@ if(global.duelHasStarted){
 		sprite_index = Scythe_Jump_Spr;
 		mask_index = Jump_Hurtbox_Spr;
 		image_index = 0;
-		alarm[3] = 6;
+		alarm[3] = 8;
 	}
 
 	// Block
@@ -190,7 +190,7 @@ if(global.duelHasStarted){
 				action = "Sb";
 		
 				sprite_index = Scythe_Sb_Spr;
-				mask_index = Duck_Hurtbox_Spr;
+				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_B;

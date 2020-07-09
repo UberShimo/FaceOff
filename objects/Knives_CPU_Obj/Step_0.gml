@@ -80,7 +80,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Au";
 		
 			sprite_index = Knives_Au_Spr;
@@ -133,7 +133,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Su1";
 		
 			sprite_index = Knives_Su_Spr;

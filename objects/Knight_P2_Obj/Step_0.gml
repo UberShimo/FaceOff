@@ -5,7 +5,7 @@ if(global.duelHasStarted){
 	// CONTROLS
 
 	// Forward
-	if(keyboard_check(global.P2_Forward) &&
+	if(Forward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
 		if(x > Player1_Obj.x +10){
 			x += ms;
@@ -15,7 +15,7 @@ if(global.duelHasStarted){
 		mask_index = Stand_Hurtbox_Spr;
 	}
 	// Back
-	else if(keyboard_check(global.P2_Backward) &&
+	else if(Backward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
 		x -= ms;
 	
@@ -29,13 +29,13 @@ if(global.duelHasStarted){
 	}
 
 	// Duck
-	if(keyboard_check(global.P2_Down) && !ducking && action == "none" && !aerial){
+	if(Down_Check && !ducking && action == "none" && !aerial){
 		ducking = true;
 	
 		sprite_index = Knight_Duck_Spr;
 		mask_index = Duck_Hurtbox_Spr;
 	}
-	else if(keyboard_check_released(global.P2_Down) && ducking && action == "none"){
+	else if(Down_Released && ducking && action == "none"){
 		ducking = false;
 	 
 		sprite_index = Knight_Stand_Spr;
@@ -43,11 +43,11 @@ if(global.duelHasStarted){
 	}
 
 	// Jump
-	if(keyboard_check(global.P2_Up) && action = "none" && !ducking && !aerial){
-		if(keyboard_check(global.P2_Forward)){
+	if(Up_Check && action = "none" && !ducking && !aerial){
+		if(Forward_Check){
 			hspeed = ms;
 		}
-		else if(keyboard_check(global.P2_Backward)){
+		else if(Backward_Check){
 			hspeed = -ms;
 		}
 	
@@ -61,11 +61,11 @@ if(global.duelHasStarted){
 	}
 
 	// Block
-	if(keyboard_check(global.P2_Block) && 
+	if(Block_Check && 
 	action = "none" && !aerial){
 		blocking = true;
 	
-		if(keyboard_check(global.P2_Down)){
+		if(Down_Check){
 			sprite_index = Knight_Block_Ducking_Spr;
 			mask_index = Duck_Hurtbox_Spr;
 		}
@@ -74,9 +74,9 @@ if(global.duelHasStarted){
 			mask_index = Stand_Hurtbox_Spr;
 		}
 	}
-	else if(keyboard_check_released(global.P2_Block) &&
+	else if(Block_Released &&
 	action = "none" && !aerial){
-		if(keyboard_check(global.P2_Down)){
+		if(Down_Check){
 			ducking = true;
 			sprite_index = Knight_Duck_Spr;
 			mask_index = Duck_Hurtbox_Spr;
@@ -95,7 +95,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Au";
 		
 			sprite_index = Knight_Au_Spr;
@@ -116,7 +116,7 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_A;
 			}
-			else if(keyboard_check(global.P2_Forward)){
+			else if(Forward_Check){
 				action = "Af";
 		
 				sprite_index = Knight_Af_Spr;
@@ -125,7 +125,7 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_B;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Ab";
 		
 				sprite_index = Knight_Ab_Spr;
@@ -149,7 +149,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Su1";
 		
 			sprite_index = Knight_Su_Spr;
@@ -171,16 +171,16 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_B;
 			}
-			else if(keyboard_check(global.P2_Forward)){
+			else if(Forward_Check){
 				action = "Sf1";
 		
 				sprite_index = Knight_Sf_Spr;
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
 				alarm[0] = image_number * 2;
-				alarm[3] = global.startUp_B;
+				alarm[3] = global.startUp_C;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Sb";
 		
 				sprite_index = Knight_Sb_Spr;
@@ -227,10 +227,10 @@ if(global.duelHasStarted){
 	
 	// An cancel
 	if(action == "An1" && image_index < 2){
-		if(keyboard_check(global.P2_Block)){
+		if(Block_Check){
 			action = "none";
 		}
-		else if(keyboard_check(global.P2_Forward)){
+		else if(Forward_Check){
 			action = "Af";
 		
 			sprite_index = Knight_Af_Spr;
@@ -239,7 +239,7 @@ if(global.duelHasStarted){
 			alarm[0] = image_number * 2;
 			alarm[3] = global.startUp_B;
 		}
-		else if(keyboard_check(global.P2_Backward)){
+		else if(Backward_Check){
 			action = "Ab";
 		
 			sprite_index = Knight_Ab_Spr;

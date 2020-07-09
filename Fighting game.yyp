@@ -4455,14 +4455,6 @@
             }
         },
         {
-            "Key": "d1a85f75-005e-4649-9281-a6dc82b17700",
-            "Value": {
-                "id": "d51c33d5-feb6-4bbe-8ded-548b07e59517",
-                "resourcePath": "objects\\Character_Shell_P1_Obj\\Character_Shell_P1_Obj.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "d1c4939f-7686-49e0-bd37-bbd41bf22128",
             "Value": {
                 "id": "f8d8a8d9-2e85-45cb-8cda-dd111b5c1491",

@@ -1,5 +1,5 @@
 if(other.spawner = "P2"){
-	if(determination && action != "none" && !blocking){
+	if(determination && (action != "none" || action != "stunned") && !blocking){
 		HP -= other.dmg;
 	
 		determination = false;

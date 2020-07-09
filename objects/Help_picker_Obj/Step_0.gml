@@ -1,4 +1,4 @@
-if(keyboard_check_pressed(global.P1_Backward)){
+if(Backward_Pressed){
 	if(place_free(x-24, y)){
 		x -= 24;
 	}
@@ -8,7 +8,7 @@ if(keyboard_check_pressed(global.P1_Backward)){
 		}
 	}
 }
-else if(keyboard_check_pressed(global.P1_Forward)){
+else if(Forward_Pressed){
 	if(place_free(x+24, y)){
 		x += 24;
 	}
@@ -18,7 +18,7 @@ else if(keyboard_check_pressed(global.P1_Forward)){
 		}
 	}
 }
-else if(keyboard_check_pressed(global.P1_Up)){
+else if(Up_Pressed){
 	if(place_free(x, y-24)){
 		y -= 24;
 	}
@@ -28,7 +28,7 @@ else if(keyboard_check_pressed(global.P1_Up)){
 		}
 	}
 }
-else if(keyboard_check_pressed(global.P1_Down)){
+else if(Down_Pressed){
 	if(place_free(x, y+24)){
 		y += 24;
 	}
@@ -38,7 +38,7 @@ else if(keyboard_check_pressed(global.P1_Down)){
 		}
 	}
 }
-else if(keyboard_check_pressed(global.P1_Attack)){
+else if(Attack_Pressed){
 	audio_play_sound(Pick_snd, 1, false);
 	
 	if(place_meeting(x, y, Knight_Icon_Obj)){
@@ -67,6 +67,6 @@ else if(keyboard_check_pressed(global.P1_Attack)){
 	}
 }
 
-if(keyboard_check_pressed(global.P1_Special)){
+if(Special_Pressed){
 	room_goto(Menu);
 }

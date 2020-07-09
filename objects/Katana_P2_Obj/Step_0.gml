@@ -5,7 +5,7 @@ if(global.duelHasStarted){
 	// CONTROLS
 
 	// Forward
-	if(keyboard_check(global.P2_Forward) &&
+	if(Forward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
 		if(x > Player1_Obj.x +10){
 			x += ms;
@@ -15,7 +15,7 @@ if(global.duelHasStarted){
 		mask_index = Stand_Hurtbox_Spr;
 	}
 	// Back
-	else if(keyboard_check(global.P2_Backward) &&
+	else if(Backward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
 		x -= ms;
 	
@@ -29,13 +29,13 @@ if(global.duelHasStarted){
 	}
 
 	// Duck
-	if(keyboard_check(global.P2_Down) && !ducking && action == "none" && !aerial){
+	if(Down_Check && !ducking && action == "none" && !aerial){
 		ducking = true;
 	
 		sprite_index = Katana_Duck_Spr;
 		mask_index = Duck_Hurtbox_Spr;
 	}
-	else if(keyboard_check_released(global.P2_Down) && ducking && action == "none"){
+	else if(Down_Released && ducking && action == "none"){
 		ducking = false;
 	 
 		sprite_index = Katana_Stand_Spr;
@@ -43,11 +43,11 @@ if(global.duelHasStarted){
 	}
 
 	// Jump
-	if(keyboard_check(global.P2_Up) && action = "none" && !ducking && !aerial){
-		if(keyboard_check(global.P2_Forward)){
+	if(Up_Check && action = "none" && !ducking && !aerial){
+		if(Forward_Check){
 			hspeed = ms;
 		}
-		else if(keyboard_check(global.P2_Backward)){
+		else if(Backward_Check){
 			hspeed = -ms;
 		}
 	
@@ -61,11 +61,11 @@ if(global.duelHasStarted){
 	}
 
 	// Block
-	if(keyboard_check(global.P2_Block) && 
+	if(Block_Check && 
 	action = "none" && !aerial){
 		blocking = true;
 	
-		if(keyboard_check(global.P2_Down)){
+		if(Down_Check){
 			sprite_index = Katana_Block_Ducking_Spr;
 			mask_index = Duck_Hurtbox_Spr;
 		}
@@ -74,9 +74,9 @@ if(global.duelHasStarted){
 			mask_index = Stand_Hurtbox_Spr;
 		}
 	}
-	else if(keyboard_check_released(global.P2_Block) &&
+	else if(Block_Released &&
 	action = "none" && !aerial){
-		if(keyboard_check(global.P2_Down)){
+		if(Down_Check){
 			ducking = true;
 			sprite_index = Katana_Duck_Spr;
 			mask_index = Duck_Hurtbox_Spr;
@@ -95,7 +95,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Au";
 		
 			sprite_index = Katana_Au_Spr;
@@ -116,7 +116,7 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_A;
 			}
-			else if(keyboard_check(global.P2_Forward)){
+			else if(Forward_Check){
 				action = "Af";
 		
 				sprite_index = Katana_Af_Spr;
@@ -125,7 +125,7 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_A;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Ab1";
 		
 				sprite_index = Katana_Ab_Spr;
@@ -149,7 +149,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Into_Eagle";
 		
 			sprite_index = Katana_Au_Spr;
@@ -168,7 +168,7 @@ if(global.duelHasStarted){
 				image_index = 0;
 				alarm[3] = 6;
 			}
-			else if(keyboard_check(global.P2_Forward)){
+			else if(Forward_Check){
 				action = "Into_Tiger";
 		
 				sprite_index = Katana_TigerDash_Spr;
@@ -178,7 +178,7 @@ if(global.duelHasStarted){
 				friction = 0.4;
 				alarm[3] = 12;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Into_Viper";
 		
 				sprite_index = Katana_Into_Viper_Spr;
@@ -201,7 +201,7 @@ if(global.duelHasStarted){
 	// EAGLE
 	if(action == "Eagle"){
 		if(Abuffer > 0){
-			if(keyboard_check(global.P2_Down)){
+			if(Down_Check){
 				action = "Eagle_Ad";
 		
 				sprite_index = Katana_Eagle_Ad_Spr;
@@ -209,7 +209,7 @@ if(global.duelHasStarted){
 				image_index = 0;
 				alarm[3] = global.startUp_A;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Eagle_Ab";
 		
 				sprite_index = Katana_Eagle_Ab_Spr;
@@ -227,8 +227,8 @@ if(global.duelHasStarted){
 				alarm[3] = global.startUp_A;
 			}
 		}
-		else if(keyboard_check_pressed(global.P2_Special)){
-			if(keyboard_check(global.P2_Down)){
+		else if(Special_Pressed){
+			if(Down_Check){
 				action = "Into_Tiger";
 		
 				sprite_index = Katana_Into_Tiger_Spr;
@@ -236,7 +236,7 @@ if(global.duelHasStarted){
 				image_index = 0;
 				alarm[3] = 6;
 			}
-			else if(keyboard_check(global.P2_Forward)){
+			else if(Forward_Check){
 				action = "Into_Tiger";
 		
 				sprite_index = Katana_TigerDash_Spr;
@@ -246,7 +246,7 @@ if(global.duelHasStarted){
 				friction = 0.4;
 				alarm[3] = 12;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Into_Viper";
 		
 				sprite_index = Katana_Into_Viper_Spr;
@@ -256,7 +256,7 @@ if(global.duelHasStarted){
 				alarm[3] = 6;
 			}
 		}
-		else if(keyboard_check(global.P2_Block)){
+		else if(Block_Check){
 			action = "StanceCancel";
 			
 			sprite_index = Katana_Into_Eagle_Spr;
@@ -269,7 +269,7 @@ if(global.duelHasStarted){
 	// VIPER
 	if(action == "Viper"){
 		if(Abuffer > 0){
-			if(keyboard_check(global.P2_Down)){
+			if(Down_Check){
 				action = "Viper_Ad1";
 		
 				sprite_index = Katana_Viper_Ad_Spr;
@@ -278,7 +278,7 @@ if(global.duelHasStarted){
 				hspeed = ms;
 				alarm[3] = global.startUp_A;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Viper_Ab";
 		
 				sprite_index = Katana_Viper_Ab_Spr;
@@ -296,8 +296,8 @@ if(global.duelHasStarted){
 				alarm[3] = global.startUp_A;
 			}
 		}
-		else if(keyboard_check_pressed(global.P2_Special)){
-			if(keyboard_check(global.P2_Down)){
+		else if(Special_Pressed){
+			if(Down_Check){
 				action = "Into_Tiger";
 		
 				sprite_index = Katana_Into_Tiger_Spr;
@@ -305,7 +305,7 @@ if(global.duelHasStarted){
 				image_index = 0;
 				alarm[3] = 6;
 			}
-			else if(keyboard_check(global.P2_Forward)){
+			else if(Forward_Check){
 				action = "Into_Tiger";
 		
 				sprite_index = Katana_TigerDash_Spr;
@@ -315,7 +315,7 @@ if(global.duelHasStarted){
 				friction = 0.4;
 				alarm[3] = 12;
 			}
-			else if(!keyboard_check(global.P2_Backward)){
+			else if(!Backward_Check){
 				action = "Into_Eagle";
 		
 				sprite_index = Katana_Into_Eagle_Spr;
@@ -324,7 +324,7 @@ if(global.duelHasStarted){
 				alarm[3] = 6;
 			}
 		}
-		else if(keyboard_check(global.P2_Block)){
+		else if(Block_Check){
 			action = "StanceCancel";
 			
 			sprite_index = Katana_Into_Viper_Spr;
@@ -337,7 +337,7 @@ if(global.duelHasStarted){
 	// TIGER
 	if(action == "Tiger"){
 		if(Abuffer > 0){
-			if(keyboard_check(global.P2_Down)){
+			if(Down_Check){
 				action = "Tiger_Ad";
 		
 				sprite_index = Katana_Tiger_Ad_Spr;
@@ -346,7 +346,7 @@ if(global.duelHasStarted){
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_B;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Tiger_Ab";
 		
 				sprite_index = Katana_Tiger_Ab_Spr;
@@ -364,8 +364,8 @@ if(global.duelHasStarted){
 				alarm[3] = global.startUp_A;
 			}
 		}
-		else if(keyboard_check_pressed(global.P2_Special)){
-			if(keyboard_check(global.P2_Forward)){
+		else if(Special_Pressed){
+			if(Forward_Check){
 				action = "Into_Tiger";
 		
 				sprite_index = Katana_TigerDash_Spr;
@@ -375,7 +375,7 @@ if(global.duelHasStarted){
 				friction = 0.4;
 				alarm[3] = 12;
 			}
-			else if(keyboard_check(global.P2_Backward)){
+			else if(Backward_Check){
 				action = "Into_Viper";
 		
 				sprite_index = Katana_Into_Viper_Spr;
@@ -384,7 +384,7 @@ if(global.duelHasStarted){
 				hspeed = -ms;
 				alarm[3] = 6;
 			}
-			else if(!keyboard_check(global.P2_Down)){
+			else if(!Down_Check){
 				action = "Into_Eagle";
 		
 				sprite_index = Katana_Into_Eagle_Spr;
@@ -393,7 +393,7 @@ if(global.duelHasStarted){
 				alarm[3] = 6;
 			}
 		}
-		else if(keyboard_check(global.P2_Block)){
+		else if(Block_Check){
 			action = "StanceCancel";
 			
 			sprite_index = Katana_Into_Tiger_Spr;
@@ -422,10 +422,10 @@ if(global.duelHasStarted){
 
 	// An cancel
 	if(action == "An1" && image_index < 2){
-		if(keyboard_check(global.P2_Block)){
+		if(Block_Check){
 			action = "none";
 		}
-		else if(keyboard_check(global.P2_Forward)){
+		else if(Forward_Check){
 			action = "Af";
 		
 			sprite_index = Katana_Af_Spr;
@@ -434,7 +434,7 @@ if(global.duelHasStarted){
 			alarm[0] = image_number * 2;
 			alarm[3] = global.startUp_B;
 		}
-		else if(keyboard_check(global.P2_Backward)){
+		else if(Backward_Check){
 			action = "Ab1";
 		
 			sprite_index = Katana_Ab_Spr;

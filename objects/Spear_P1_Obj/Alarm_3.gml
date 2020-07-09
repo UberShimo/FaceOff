@@ -48,7 +48,7 @@ else if(action == "Sn_start"){
 else if(action == "Sn_hit"){
 	x += 4;
 	
-	if(keyboard_check(global.P1_Down)){
+	if(Down_Check){
 		sprite_index = Spear_Sn_L_Spr;
 		mask_index = Stand_Hurtbox_Spr;
 		image_index = 0;

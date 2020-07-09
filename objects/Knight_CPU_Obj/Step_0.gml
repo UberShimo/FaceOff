@@ -80,7 +80,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Au";
 		
 			sprite_index = Knight_Au_Spr;
@@ -134,7 +134,7 @@ if(global.duelHasStarted){
 		blocking = false;
 	
 		// Aerial
-		if(aerial && image_index > 2 && image_index < 6){
+		if(aerial && image_index > 3 && image_index < 6){
 			action = "Su1";
 		
 			sprite_index = Knight_Su_Spr;
@@ -163,7 +163,7 @@ if(global.duelHasStarted){
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
 				alarm[0] = image_number * 2;
-				alarm[3] = global.startUp_B;
+				alarm[3] = global.startUp_C;
 			}
 			else if(Backward){
 				action = "Sb";

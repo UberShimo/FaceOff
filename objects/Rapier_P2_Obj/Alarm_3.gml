@@ -1,10 +1,10 @@
 /// @description hitbox etc
 
 if(action == "An1" || action == "An2"){
-	if(keyboard_check(global.P2_Forward)){
+	if(Forward_Check){
 		x -= 8;
 	}
-	else if(keyboard_check(global.P2_Backward)){
+	else if(Backward_Check){
 		x += 8;
 	}
 	hitbox = instance_create_depth(x, y, 0, Rapier_An_Hitbox_Obj);
@@ -38,7 +38,7 @@ else if(action == "Au"){
 else if(action == "Sn"){
 	x -= 6;
 	
-	if(keyboard_check(global.P2_Down)){
+	if(Down_Check){
 		hitbox = instance_create_depth(x, y, 0, Rapier_Sn_then_D_Hitbox_Obj);
 		hitbox.spawner = "P2";
 		hitbox.image_xscale = -1;
