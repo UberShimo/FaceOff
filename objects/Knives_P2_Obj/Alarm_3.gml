@@ -55,22 +55,8 @@ else if(action == "Sn"){
 	hitbox.spawner = "P2";
 	hitbox.image_xscale = -1;
 }
-else if(action == "Sf"){
-	repeat(16){
-		if(x > Player1_Obj.x +10){
-			x -= 2;
-		}
-	}
-	action = "none";
-}
-else if(action == "Sb"){
-	repeat(16){
-		if(!place_meeting(x + 16, y, OutOfBounds_Obj)){
-			x += 2;
-		}
-	}
-	action = "none";
-}
+// No Sf or Sb to be found here
+
 else if(action == "Sd1"){
 	hitbox = instance_create_depth(x, y, 0, Knives_Sd_Hitbox_Obj);
 	hitbox.spawner = "P2";

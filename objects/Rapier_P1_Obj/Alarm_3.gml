@@ -11,7 +11,7 @@ if(action == "An1" || action == "An2"){
 	hitbox.spawner = "P1";
 }
 else if(action == "Af"){
-	x += 20;
+	x += 24;
 	
 	hitbox = instance_create_depth(x, y, 0, Rapier_Af_Hitbox_Obj);
 	hitbox.spawner = "P1";

@@ -144,7 +144,7 @@ if(global.duelHasStarted){
 			}
 		}
 	}
-	else if(action = "none" && Sbuffer > 0 && alarm[5] < 100){	
+	else if(action = "none" && Sbuffer > 0){	
 		blocking = false;
 	
 		// Aerial
@@ -170,23 +170,37 @@ if(global.duelHasStarted){
 				alarm[3] = global.startUp_A;
 			}
 			else if(Forward_Check){
-				if(hasTeleport){
-					action = "Sf";
-					hasTeleport = false;
-		
+				if(teleports > 0){
+					if(teleports == 2){
+						alarm[5] = 180;
+					}
+					teleports -= 1;
+					Sbuffer = 0;
+					
 					instance_create_depth(x, y, -1, Knives_Sf_Eff);
-					alarm[3] = 1;
-					alarm[5] = 120;
+					
+					repeat(16){
+						if(x < Player2_Obj.x -10){
+							x += 2;
+						}
+					}
 				}
 			}
 			else if(Backward_Check){
-				if(hasTeleport){
-					action = "Sb";
-					hasTeleport = false;
-		
+				if(teleports > 0){
+					if(teleports == 2){
+						alarm[5] = 180;
+					}
+					teleports -= 1;
+					Sbuffer = 0;
+					
 					instance_create_depth(x, y, -1, Knives_Sb_Eff);
-					alarm[3] = 1;
-					alarm[5] = 120;
+					
+					repeat(16){
+						if(!place_meeting(x - 16, y, OutOfBounds_Obj)){
+							x -= 2;
+						}
+					}
 				}
 			}
 			else{

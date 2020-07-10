@@ -2,12 +2,12 @@ GAME NAME: Face off
 
 TODO
 Optimize the stance switching for Katana. Check if action = "Eagle or Viper or Tiger" and check if Special is pressed instead of making stance switch within every stance.
-Crisp Knight Sf up ffs!
-
 Fix so you cant touch OutOfBounds by doing an attack through opponent.
+Claws. An 3 times looks wierd dude.
+
 Fix so you stand still after killing opponent no matter what.
 Fix Scythe Healthbar after suiciding with Sf.
-Fix Scythe Ab so it launch correct.
+Fix Scythe Ab so it launch correct. Fixed?
 Fix death animation when killed by bleed. Fixed?
 
 Room size: 256 x 128

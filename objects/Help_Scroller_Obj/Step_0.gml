@@ -1,10 +1,10 @@
-if(keyboard_check(global.P1_Up) && place_free(x, y-2)){
+if(Up_Check && place_free(x, y-2)){
 	y -= 2;
 }
-else if(keyboard_check(global.P1_Down) && place_free(x, y+2)){
+else if(Down_Check && place_free(x, y+2)){
 	y += 2;
 }
 
-if(keyboard_check(global.P1_Special)){
+if(Special_Check){
 	room_goto(Help_Select);
 }

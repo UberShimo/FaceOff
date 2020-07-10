@@ -13,4 +13,4 @@ blockStunCrouchingSprite = Knives_BlockStunned_Ducking_Spr;
 guardBreakSprite = Knives_GuardBreak_Spr;
 deadSprite = Knives_Dead_Spr;
 
-hasTeleport = true;
+teleports = 2;

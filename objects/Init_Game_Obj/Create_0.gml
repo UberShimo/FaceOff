@@ -3,10 +3,10 @@ global.startUp_B = 16;
 global.startUp_C = 24;
 
 /*
-recovery_A+ = 16; Rarely used
-recovery_A = 24;
-recovery_B = 32;
-recovery_C = 40;
+recovery_A+ = 24; Rarely used
+recovery_A = 32;
+recovery_B = 40;
+recovery_B = 48;
 */
 
 global.hitStun_A = 0; // launch
@@ -28,7 +28,7 @@ global.blockPush_B = 2;
 global.blockPush_C = 0;
 
 //Settings
-global.bufferAmount = 8;
+global.bufferAmount = 12;
 global.hitboxDuration = 4;
 global.gravityValue = 0.2;
 
@@ -39,6 +39,8 @@ global.CPU_pick = noone;
 
 global.duelHasStarted = false;
 
+global.GP1_index = 4;
+global.GP2_index = 5;
 
 randomize();
 
