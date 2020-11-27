@@ -41,6 +41,16 @@ if(global.duelHasStarted){
 		sprite_index = Mace_Duck_Spr;
 		mask_index = Duck_Hurtbox_Spr;
 	}
+	else if(action == "none" && !aerial &&
+	!Forward && !Backward){
+		ducking = false;
+	
+		sprite_index = Mace_Stand_Spr;
+		mask_index = Stand_Hurtbox_Spr;
+	}
+	else if(action = "none" && !Down){
+		ducking = false;
+	}
 
 	// Jump
 	if(Up && action = "none" && !ducking && !aerial){
@@ -73,6 +83,9 @@ if(global.duelHasStarted){
 			sprite_index = Mace_Block_Standing_Spr;
 			mask_index = Stand_Hurtbox_Spr;
 		}
+	}
+	else{
+		blocking = false;
 	}
 
 

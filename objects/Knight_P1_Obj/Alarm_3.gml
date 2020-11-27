@@ -65,3 +65,6 @@ else if(action == "Su1"){
 else if(action == "Su2"){
 	determination = true;
 }
+
+// Inherit Anti cross up
+event_inherited();

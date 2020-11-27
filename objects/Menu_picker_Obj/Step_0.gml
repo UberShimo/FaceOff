@@ -30,6 +30,9 @@ else if(Attack_Pressed){
 	else if(place_meeting(x, y, Help_Option_Obj)){
 		room_goto(Help_Select);
 	}
+	else if(place_meeting(x, y, Fullscreen_Option_Obj)){
+		window_set_fullscreen(!window_get_fullscreen());
+	}
 	else if(place_meeting(x, y, Exit_Option_Obj)){
 		game_end();
 	}

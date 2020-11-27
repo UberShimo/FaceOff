@@ -12,6 +12,7 @@ blockStunStandingSprite = Rapier_BlockStunned_Standing_Spr;
 blockStunCrouchingSprite = Rapier_BlockStunned_Ducking_Spr;
 guardBreakSprite = Rapier_GuardBreak_Spr;
 deadSprite = Rapier_Dead_Spr;
+victorySprite = Rapier_Stand_Spr;
 
 Forward = false;
 Backward = false;

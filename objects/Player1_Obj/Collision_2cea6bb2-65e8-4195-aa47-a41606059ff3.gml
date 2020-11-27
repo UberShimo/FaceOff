@@ -1,5 +1,4 @@
-if(other.spawner = "P2" && action != "dead"){
-	alarm[3] = 0; // Hitbox alarm
+if(other.spawner = "P2" && action != "dead" && action != "rising"){
 	friction = 0;
 	hit = false;
 	
@@ -7,7 +6,7 @@ if(other.spawner = "P2" && action != "dead"){
 	if(other.penetration == 1){
 		HP -= other.dmg;
 		
-		// Small dmg like bleed should not stun
+		// Small dmg (like bleed) should not stun
 		if(other.hitStun > 0){
 			action = "stunned";
 			blocking = false;
@@ -60,9 +59,9 @@ if(other.spawner = "P2" && action != "dead"){
 			
 				alarm[0] = other.hitStun;
 				hspeed = -other.hitPush;
+				
+				hit = true;
 			}
-			
-			hit = true;
 			audio_play_sound(Hit_snd, 3, false);
 			
 			if(other.type = "H"){
@@ -94,9 +93,9 @@ if(other.spawner = "P2" && action != "dead"){
 			
 				alarm[0] = other.hitStun;
 				hspeed = -other.hitPush;
+				
+				hit = true;
 			}
-			
-			hit = true;
 			audio_play_sound(Hit_snd, 3, false);
 			
 			instance_create_depth(x+4, y+8, -2, Hit_Eff_Obj);
@@ -129,9 +128,9 @@ if(other.spawner = "P2" && action != "dead"){
 			
 				alarm[0] = other.hitStun;
 				hspeed = -other.hitPush;
+				
+				hit = true;
 			}
-			
-			hit = true;
 			audio_play_sound(Hit_snd, 3, false);
 			
 			if(other.type = "H"){
@@ -149,8 +148,7 @@ if(other.spawner = "P2" && action != "dead"){
 		}
 	}
 	// Launch logic
-	if((hit && other.launcher && action != "rising")
-	|| action = "launched"){
+	if((hit && other.launcher) || action = "launched"){
 		hspeed = -other.hLaunch;
 		vspeed = other.vLaunch;
 		gravity_direction = -90;
@@ -161,13 +159,10 @@ if(other.spawner = "P2" && action != "dead"){
 		
 		action = "launched";
 	}
-	else if(action = "rising"){	
-		action = "stunned";
-		sprite_index = hitSprite;
-		mask_index = Stand_Hurtbox_Spr;
-		
-		alarm[0] = global.hitStun_C;
-		hspeed = -2;
+	
+	// Interrupt hitbox outcome
+	if(hit){
+		alarm[3] = 0;
 	}
 	
 	// Bleed logic (Knives relevant)
@@ -198,6 +193,7 @@ if(other.spawner = "P2" && action != "dead"){
 			action = "dead";
 			sprite_index = deadSprite;
 			mask_index = Duck_Hurtbox_Spr;
+			image_index = 0;
 			alarm[0] = 0;
 			alarm[9] = (image_number * 2) -1;
 			gravity = 0;
@@ -205,4 +201,16 @@ if(other.spawner = "P2" && action != "dead"){
 			vspeed = 0;
 		}
 	}
+}
+else if(action = "rising" && other.hitStun > 0){
+	HP -= other.dmg;
+	action = "stunned";
+	sprite_index = hitSprite;
+	mask_index = Stand_Hurtbox_Spr;
+		
+	alarm[0] = global.hitStun_C;
+	hspeed = -2;
+	
+	audio_play_sound(Hit_snd, 3, false);
+	instance_create_depth(x+4, y+12, -2, Hit_Eff_Obj);
 }

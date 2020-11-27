@@ -61,8 +61,13 @@ else if(action == "Sf"){
 	hitbox.spawner = "P2";
 	hitbox.image_xscale = -1;
 	
-	HP -= 20;
-	audio_play_sound(Hit_snd, 3, false);
+	action = "Sf_Hurts";
+	alarm[3] = 32;
+}
+else if(action == "Sf_Hurts"){
+	hitbox = instance_create_depth(x, y, 0, Scythe_Sf_SelfDMG_Hitbox_Obj);
+	hitbox.spawner = "P1";
+	hitbox.image_xscale = -1;
 }
 else if(action == "Sb"){
 	instance_create_depth(x, y, 0, Scythe_Bird_P2_Obj);
@@ -91,3 +96,6 @@ else if(action == "Into_Hover"){
 	
 	sprite_index = Scythe_Hover_Spr;
 }
+
+// Inherit Anti cross up
+event_inherited();

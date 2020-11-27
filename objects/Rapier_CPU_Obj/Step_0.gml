@@ -40,6 +40,16 @@ if(global.duelHasStarted){
 		sprite_index = Rapier_Duck_Spr;
 		mask_index = Duck_Hurtbox_Spr;
 	}
+	else if(action == "none" && !aerial &&
+	!Forward && !Backward){
+		ducking = false;
+	
+		sprite_index = Rapier_Stand_Spr;
+		mask_index = Stand_Hurtbox_Spr;
+	}
+	else if(action = "none" && !Down){
+		ducking = false;
+	}
 
 	// Jump
 	if(Up && action = "none" && !ducking && !aerial){
@@ -72,6 +82,9 @@ if(global.duelHasStarted){
 			sprite_index = Rapier_Block_Standing_Spr;
 			mask_index = Stand_Hurtbox_Spr;
 		}
+	}
+	else{
+		blocking = false;
 	}
 
 
@@ -170,7 +183,7 @@ if(global.duelHasStarted){
 				action = "Sb1";
 		
 				sprite_index = Rapier_Sb_Spr;
-				mask_index = Duck_Hurtbox_Spr;
+				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_B;

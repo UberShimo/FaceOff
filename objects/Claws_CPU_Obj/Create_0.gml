@@ -12,6 +12,7 @@ blockStunStandingSprite = Claws_BlockStunned_Standing_Spr;
 blockStunCrouchingSprite = Claws_BlockStunned_Ducking_Spr;
 guardBreakSprite = Claws_GuardBreak_Spr;
 deadSprite = Claws_Dead_Spr;
+victorySprite = Claws_Stand_Spr;
 
 fading_away = false;
 fading_back = false;

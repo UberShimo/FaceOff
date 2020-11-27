@@ -72,7 +72,7 @@ if(global.duelHasStarted){
 	// Jump
 	if(Up_Check && action = "none" && !ducking && !aerial){
 		if(Forward_Check){
-			hspeed = ms * 1.5;
+			hspeed = ms;
 		}
 		else if(Backward_Check){
 			hspeed = -ms;
@@ -246,7 +246,7 @@ if(global.duelHasStarted){
 		sprite_index = Claws_An1_Spr;
 		mask_index = Stand_Hurtbox_Spr;
 		image_index = 6;
-		alarm[0] = image_number * 2; 
+		alarm[0] = 32;
 		alarm[3] = 1;
 	}
 	else if(action == "An3" && Abuffer > 0 && image_index == 10){

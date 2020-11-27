@@ -12,5 +12,6 @@ blockStunStandingSprite = Scythe_BlockStunned_Standing_Spr;
 blockStunCrouchingSprite = Scythe_BlockStunned_Ducking_Spr;
 guardBreakSprite = Scythe_GuardBreak_Spr;
 deadSprite = Scythe_Dead_Spr;
+victorySprite = Scythe_Stand_Spr;
 
 hasBlast = true;

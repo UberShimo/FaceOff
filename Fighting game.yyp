@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "0e1cefe3-b83e-4243-968d-674999a0af38",
+            "Value": {
+                "id": "fc8ff948-357a-4805-860c-6687b3520e1a",
+                "resourcePath": "sprites\\Xbox_Controls_Spr\\Xbox_Controls_Spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0ea19b39-47c3-4312-ae47-a7299cd2821a",
             "Value": {
                 "id": "63e01434-705e-4aac-93e6-94460ae8993c",
@@ -735,6 +743,14 @@
             }
         },
         {
+            "Key": "235b1437-9161-4f36-b06c-62296330650f",
+            "Value": {
+                "id": "0d521c03-79f7-4099-b76f-85f0f5608630",
+                "resourcePath": "sprites\\Random_Icon\\Random_Icon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2375a73b-5e04-4a60-9459-289e4364ae58",
             "Value": {
                 "id": "bbd9398a-01ea-4d12-84cf-65df34ce413b",
@@ -756,6 +772,14 @@
                 "id": "6bf475b4-da2e-4a15-897a-e1e8ca3f765c",
                 "resourcePath": "objects\\Mace_P1_Obj\\Mace_P1_Obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2548d8af-6035-4a6b-9b08-82d7f9968a35",
+            "Value": {
+                "id": "8b6595df-b35f-4ed4-a95f-839d0008d606",
+                "resourcePath": "sprites\\Fullscreen_Spr\\Fullscreen_Spr.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -847,6 +871,14 @@
             }
         },
         {
+            "Key": "29c530e5-a8e5-4152-88a2-2bef39b4f2b0",
+            "Value": {
+                "id": "79aaec38-ceef-4ab1-9709-12cef93b74ad",
+                "resourcePath": "objects\\Block_Help_Obj\\Block_Help_Obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "29cce3f8-2c8b-4367-b809-ef214a0bc646",
             "Value": {
                 "id": "4c522cda-47c4-4b84-b762-cc7c0f1c71fa",
@@ -927,6 +959,14 @@
             }
         },
         {
+            "Key": "2ee10ec1-e129-43c3-b1e1-38b31c46f431",
+            "Value": {
+                "id": "bf08c055-8602-4b7e-98eb-9f41ebddc4ad",
+                "resourcePath": "objects\\Fullscreen_Option_Obj\\Fullscreen_Option_Obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2fb74734-2e6d-4e93-ab2b-93c3a276fb1f",
             "Value": {
                 "id": "d7c93593-4aa2-4771-aa1e-13d253188ea7",
@@ -971,6 +1011,14 @@
             "Value": {
                 "id": "d5125bd0-ca72-4d9d-abd1-7c88d576a908",
                 "resourcePath": "objects\\P2_Bleed_Frame_Obj\\P2_Bleed_Frame_Obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "31913afa-3967-4dc0-be5e-53547e3cb656",
+            "Value": {
+                "id": "5d7c07e8-2719-458d-bc70-7a1ac0f1181c",
+                "resourcePath": "objects\\Random_Icon_Obj\\Random_Icon_Obj.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1204,6 +1252,14 @@
                 "id": "3b5388cf-388a-4cab-a472-fe5c0851f95d",
                 "resourcePath": "sprites\\CPU_Picker_Spr\\CPU_Picker_Spr.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3ecef478-2ced-44e7-812a-7df88d234894",
+            "Value": {
+                "id": "a7f1e544-ee29-4606-a11e-0c2c775d0a25",
+                "resourcePath": "scripts\\Generate_Random_Character_Text\\Generate_Random_Character_Text.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1831,6 +1887,14 @@
             }
         },
         {
+            "Key": "5b1e0149-db96-4ced-9879-f7b79d7da659",
+            "Value": {
+                "id": "5c6c14d0-58bf-439b-b59b-b8305ca1045e",
+                "resourcePath": "sprites\\Xbox_Icon\\Xbox_Icon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5b2aa7bd-a03b-4d8a-8d32-249dcc6b821c",
             "Value": {
                 "id": "52373789-542f-4915-8c57-ddd38223ca35",
@@ -1980,6 +2044,14 @@
                 "id": "bcac9b26-0546-4910-a5cf-301e771149be",
                 "resourcePath": "sprites\\Knives_Bleed_Frame_Spr\\Knives_Bleed_Frame_Spr.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5ed96960-df75-46a7-93cb-b33ac967bdac",
+            "Value": {
+                "id": "f725f403-cd08-41cb-acd3-db123914ab3d",
+                "resourcePath": "objects\\Xbox_Controls_Obj\\Xbox_Controls_Obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3719,6 +3791,14 @@
             }
         },
         {
+            "Key": "b0f3b40d-3385-481b-aeb4-d96396f8a8e1",
+            "Value": {
+                "id": "2cc2cfce-442d-4a2c-8bca-74eb6ed3ee71",
+                "resourcePath": "objects\\Scythe_Sf_SelfDMG_Hitbox_Obj\\Scythe_Sf_SelfDMG_Hitbox_Obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b12a0021-7d2a-423d-88a9-2141bb314c09",
             "Value": {
                 "id": "85c9acb8-305e-447c-b391-3c5496a6120a",
@@ -3780,6 +3860,14 @@
                 "id": "ae518c7a-7f06-4094-99b9-61db5f826a12",
                 "resourcePath": "sprites\\Knight_Sd_Hitbox_Spr\\Knight_Sd_Hitbox_Spr.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b4fd8ede-d1c1-4c4d-abb7-441733de0a98",
+            "Value": {
+                "id": "d642679d-3f4d-487b-8782-f34288609c13",
+                "resourcePath": "objects\\Xbox_Icon_Obj\\Xbox_Icon_Obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4244,14 +4332,6 @@
                 "id": "d9646a8d-4fd3-4dcd-9e13-ba9faabecc94",
                 "resourcePath": "sprites\\Draw_Spr\\Draw_Spr.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "cb6ccfd8-db5f-4f50-9d9a-158582165bbf",
-            "Value": {
-                "id": "4ffc7490-c9f2-4e1a-b07c-4e4fbb7b1ed9",
-                "resourcePath": "tilesets\\Block_Help_Tile\\Block_Help_Tile.yy",
-                "resourceType": "GMTileSet"
             }
         },
         {
@@ -5408,7 +5488,7 @@
         }
     ],
     "script_order": [
-        
+        "3ecef478-2ced-44e7-812a-7df88d234894"
     ],
     "tutorial": ""
 }

@@ -64,9 +64,14 @@ else{
 	depth = -1;
 }
 
+// Victory sprite
+if(!Player2_Obj.HP > 0 && HP > 0 && action == "none"){
+	sprite_index = victorySprite;
+}
+
 // Bleed logic (Knives relevant)
 if(bleed > 0 && bleed < 100){
-	bleed -= 0.4;
+	bleed -= 0.15;
 }
 else if(bleed >= 100 && HP > 0){
 	bleed = 100;

@@ -12,5 +12,5 @@ blockPush = global.blockPush_C;
 
 type = "H";
 
-hLaunch = 1;
-vLaunch = -1;
+hLaunch = 0;
+vLaunch = -1.5;

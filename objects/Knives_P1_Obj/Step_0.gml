@@ -167,7 +167,7 @@ if(global.duelHasStarted){
 				mask_index = Duck_Hurtbox_Spr;
 				image_index = 0;
 				alarm[0] = image_number * 2;
-				alarm[3] = global.startUp_A;
+				alarm[3] = global.startUp_B;
 			}
 			else if(Forward_Check){
 				if(teleports > 0){
@@ -271,7 +271,7 @@ if(global.duelHasStarted){
 
 // Bleed spawning
 if(Player2_Obj.bleed >= 100 && alarm[8] <= 0 && Player2_Obj.HP > 0){
-	alarm[8] = 4;
+	alarm[8] = 6;
 }
 
 // Guard recoverer

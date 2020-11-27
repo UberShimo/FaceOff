@@ -22,3 +22,4 @@ blockStunStandingSprite = noone;
 blockStunCrouchingSprite = noone;
 guardBreakSprite = noone;
 deadSprite = noone;
+victorySprite = noone;

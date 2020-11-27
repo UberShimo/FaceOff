@@ -145,7 +145,8 @@ if(global.duelHasStarted){
 			}
 		}
 	}
-	else if(action == "none" && Sbuffer > 0){	
+	// Stance switch
+	else if((action == "none" || action == "Eagle" || action == "Viper" || action == "Tiger") && Special_Pressed){	
 		blocking = false;
 	
 		// Aerial
@@ -160,13 +161,15 @@ if(global.duelHasStarted){
 		}
 		// NOT Aerial is needed
 		else if(!aerial){
-			if(ducking){
-				action = "Into_Tiger";
+			if(Down_Check){
+				if(action != "Tiger"){
+					action = "Into_Tiger";
 		
-				sprite_index = Katana_Into_Tiger_Spr;
-				mask_index = Duck_Hurtbox_Spr;
-				image_index = 0;
-				alarm[3] = 6;
+					sprite_index = Katana_Into_Tiger_Spr;
+					mask_index = Duck_Hurtbox_Spr;
+					image_index = 0;
+					alarm[3] = 6;
+				}
 			}
 			else if(Forward_Check){
 				action = "Into_Tiger";
@@ -179,15 +182,17 @@ if(global.duelHasStarted){
 				alarm[3] = 12;
 			}
 			else if(Backward_Check){
-				action = "Into_Viper";
+				if(action != "Viper"){
+					action = "Into_Viper";
 		
-				sprite_index = Katana_Into_Viper_Spr;
-				mask_index = Stand_Hurtbox_Spr;
-				image_index = 0;
-				hspeed = -ms;
-				alarm[3] = 6;
+					sprite_index = Katana_Into_Viper_Spr;
+					mask_index = Stand_Hurtbox_Spr;
+					image_index = 0;
+					hspeed = -ms;
+					alarm[3] = 6;
+				}
 			}
-			else{
+			else if(action != "Eagle"){
 				action = "Into_Eagle";
 		
 				sprite_index = Katana_Into_Eagle_Spr;
@@ -225,35 +230,6 @@ if(global.duelHasStarted){
 				image_index = 0;
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_A;
-			}
-		}
-		else if(Special_Pressed){
-			if(Down_Check){
-				action = "Into_Tiger";
-		
-				sprite_index = Katana_Into_Tiger_Spr;
-				mask_index = Duck_Hurtbox_Spr;
-				image_index = 0;
-				alarm[3] = 6;
-			}
-			else if(Forward_Check){
-				action = "Into_Tiger";
-		
-				sprite_index = Katana_TigerDash_Spr;
-				mask_index = Duck_Hurtbox_Spr;
-				image_index = 0;
-				hspeed = ms * 2;
-				friction = 0.4;
-				alarm[3] = 12;
-			}
-			else if(Backward_Check){
-				action = "Into_Viper";
-		
-				sprite_index = Katana_Into_Viper_Spr;
-				mask_index = Stand_Hurtbox_Spr;
-				image_index = 0;
-				hspeed = -ms;
-				alarm[3] = 6;
 			}
 		}
 		else if(Block_Check){
@@ -296,34 +272,6 @@ if(global.duelHasStarted){
 				alarm[3] = global.startUp_A;
 			}
 		}
-		else if(Special_Pressed){
-			if(Down_Check){
-				action = "Into_Tiger";
-		
-				sprite_index = Katana_Into_Tiger_Spr;
-				mask_index = Duck_Hurtbox_Spr;
-				image_index = 0;
-				alarm[3] = 6;
-			}
-			else if(Forward_Check){
-				action = "Into_Tiger";
-		
-				sprite_index = Katana_TigerDash_Spr;
-				mask_index = Duck_Hurtbox_Spr;
-				image_index = 0;
-				hspeed = ms * 2;
-				friction = 0.4;
-				alarm[3] = 12;
-			}
-			else if(!Backward_Check){
-				action = "Into_Eagle";
-		
-				sprite_index = Katana_Into_Eagle_Spr;
-				mask_index = Stand_Hurtbox_Spr;
-				image_index = 0;
-				alarm[3] = 6;
-			}
-		}
 		else if(Block_Check){
 			action = "StanceCancel";
 			
@@ -362,35 +310,6 @@ if(global.duelHasStarted){
 				image_index = 0;
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_A;
-			}
-		}
-		else if(Special_Pressed){
-			if(Down_Check){
-				action = "Into_Tiger";
-		
-				sprite_index = Katana_TigerDash_Spr;
-				mask_index = Duck_Hurtbox_Spr;
-				image_index = 0;
-				hspeed = ms * 2;
-				friction = 0.4;
-				alarm[3] = 12;
-			}
-			else if(Backward_Check){
-				action = "Into_Viper";
-		
-				sprite_index = Katana_Into_Viper_Spr;
-				mask_index = Stand_Hurtbox_Spr;
-				image_index = 0;
-				hspeed = -ms;
-				alarm[3] = 6;
-			}
-			else if(!Down_Check){
-				action = "Into_Eagle";
-		
-				sprite_index = Katana_Into_Eagle_Spr;
-				mask_index = Stand_Hurtbox_Spr;
-				image_index = 0;
-				alarm[3] = 6;
 			}
 		}
 		else if(Block_Check){

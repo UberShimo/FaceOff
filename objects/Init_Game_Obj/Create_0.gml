@@ -9,7 +9,7 @@ recovery_B = 40;
 recovery_B = 48;
 */
 
-global.hitStun_A = 0; // launch
+global.hitStun_A = 666; // launch (needs to be above 0 so its not treated as NO HITSTUN)
 global.hitStun_B = 36;
 global.hitStun_C = 28;
 global.hitStun_D = 20; // Rarely used
@@ -30,7 +30,7 @@ global.blockPush_C = 0;
 //Settings
 global.bufferAmount = 12;
 global.hitboxDuration = 4;
-global.gravityValue = 0.2;
+global.gravityValue = 0.15;
 
 // Picks
 global.P1_pick = noone;
@@ -39,8 +39,8 @@ global.CPU_pick = noone;
 
 global.duelHasStarted = false;
 
-global.GP1_index = 4;
-global.GP2_index = 5;
+global.GP1_index = 0;
+global.GP2_index = 1;
 
 randomize();
 

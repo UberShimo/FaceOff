@@ -1,14 +1,17 @@
 GAME NAME: Face off
 
-TODO
-Optimize the stance switching for Katana. Check if action = "Eagle or Viper or Tiger" and check if Special is pressed instead of making stance switch within every stance.
-Fix so you cant touch OutOfBounds by doing an attack through opponent.
-Claws. An 3 times looks wierd dude.
+TODO{
+	Attacks miss sometimes. Donnu why ;_;
+	Launching mid air fucks up sometimes.
+	Killed my bleed midair fucks you up?
+	After launcher you cant launch with normal attack.
 
-Fix so you stand still after killing opponent no matter what.
-Fix Scythe Healthbar after suiciding with Sf.
-Fix Scythe Ab so it launch correct. Fixed?
-Fix death animation when killed by bleed. Fixed?
+	Comment away TEST HITBOXES in Match_Controller
+}
+
+Text settings:
+Arial / Bold italic
+size: 6
 
 Room size: 256 x 128
 
@@ -19,7 +22,7 @@ Descending
 Alternate
 
 
-Hurtbox fixDuring animation with ducking and jumping properties:
+Hurtbox fix during animation with ducking and jumping properties:
 mask_index = jump_sprite / stand_sprite / duck_sprite;
 
 

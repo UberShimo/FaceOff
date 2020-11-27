@@ -11,7 +11,9 @@
         "6497d7b2-a2cc-4940-a29a-4d1886d30932",
         "b884381a-4b97-4d96-b348-3fb5ca287471",
         "6c7668d1-5971-41bb-89ed-3caf0358bdd0",
-        "76996d1e-54d7-430a-86f0-10f67597ea1f"
+        "76996d1e-54d7-430a-86f0-10f67597ea1f",
+        "235b1437-9161-4f36-b06c-62296330650f",
+        "5b1e0149-db96-4ced-9879-f7b79d7da659"
     ],
     "filterType": "GMSprite",
     "folderName": "Character Icons",

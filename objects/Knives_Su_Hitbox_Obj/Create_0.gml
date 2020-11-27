@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-dmg = 12;
+dmg = 8;
 guardDmg = 16;
 bleed = 25;
 

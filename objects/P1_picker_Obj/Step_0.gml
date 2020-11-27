@@ -42,7 +42,10 @@ if(global.P1_pick == noone){
 	else if(Attack_Pressed){
 		audio_play_sound(Pick_snd, 1, false);
 		
-		if(place_meeting(x, y, Knight_Icon_Obj)){
+		if(place_meeting(x, y, Random_Icon_Obj)){
+			global.P1_pick = Generate_Random_Character_Text();
+		}
+		else if(place_meeting(x, y, Knight_Icon_Obj)){
 			global.P1_pick = "Knight";
 		}
 		if(place_meeting(x, y, Rapier_Icon_Obj)){
@@ -102,6 +105,9 @@ else if(place_meeting(x, y, Claws_Icon_Obj)){
 }
 else if(place_meeting(x, y, Scythe_Icon_Obj)){
 	P1_Character_Preview_Obj.sprite_index = Scythe_Stand_Spr;
+}
+else{
+	P1_Character_Preview_Obj.sprite_index = noone;
 }
 
 

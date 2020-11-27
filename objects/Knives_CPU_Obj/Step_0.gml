@@ -34,11 +34,21 @@ if(global.duelHasStarted){
 	}
 
 	// Duck
-	if(Down && !ducking && action == "none" && !aerial){
+	if(Down && action == "none" && !aerial){
 		ducking = true;
 	
 		sprite_index = Knives_Duck_Spr;
 		mask_index = Duck_Hurtbox_Spr;
+	}
+	else if(action == "none" && !aerial &&
+	!Forward && !Backward){
+		ducking = false;
+	
+		sprite_index = Knives_Stand_Spr;
+		mask_index = Stand_Hurtbox_Spr;
+	}
+	else if(action = "none" && !Down){
+		ducking = false;
 	}
 
 	// Jump
@@ -73,7 +83,9 @@ if(global.duelHasStarted){
 			mask_index = Stand_Hurtbox_Spr;
 		}
 	}
-
+	else{
+		blocking = false;
+	}
 
 	// ACTION
 	if(action = "none" && Attack){
@@ -152,7 +164,7 @@ if(global.duelHasStarted){
 				mask_index = Duck_Hurtbox_Spr;
 				image_index = 0;
 				alarm[0] = image_number * 2;
-				alarm[3] = global.startUp_A;
+				alarm[3] = global.startUp_B;
 			}
 			else if(Forward){
 				if(teleports > 0){
@@ -171,6 +183,7 @@ if(global.duelHasStarted){
 						}
 					}
 				}
+				Special = false;
 			}
 			else if(Backward){
 				if(teleports > 0){
@@ -189,6 +202,7 @@ if(global.duelHasStarted){
 						}
 					}
 				}
+				Special = false;
 			}
 			else{
 				action = "Sn";
@@ -231,6 +245,10 @@ if(global.duelHasStarted){
 	}
 }
 
+// Bleed spawning
+if(Player1_Obj.bleed >= 100 && alarm[8] <= 0 && Player1_Obj.HP > 0){
+	alarm[8] = 6;
+}
 
 // Guard recoverer
 if(guard < maxGuard){

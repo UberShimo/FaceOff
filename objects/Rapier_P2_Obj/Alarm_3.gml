@@ -82,3 +82,6 @@ else if(action == "Su"){
 	hitbox.spawner = "P2";
 	hitbox.image_xscale = -1;
 }
+
+// Inherit Anti cross up
+event_inherited();

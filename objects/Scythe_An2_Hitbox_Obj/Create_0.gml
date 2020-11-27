@@ -11,5 +11,5 @@ blockPush = -1;
 
 type = "H";
 
-hLaunch = 0;
-vLaunch = -0.5;
+hLaunch = -0.2;
+vLaunch = -2;

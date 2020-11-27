@@ -12,6 +12,7 @@ blockStunStandingSprite = Spear_BlockStunned_Standing_Spr;
 blockStunCrouchingSprite = Spear_BlockStunned_Ducking_Spr;
 guardBreakSprite = Spear_GuardBreak_Spr;
 deadSprite = Spear_Dead_Spr;
+victorySprite = Spear_Stand_Spr;
 
 charges = 0;
 

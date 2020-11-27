@@ -1,10 +1,10 @@
 /// @description CONTROLS
-Forward_Check = keyboard_check(vk_left) || gamepad_button_check(global.GP2_index, gp_padr);
-Forward_Pressed = keyboard_check_pressed(vk_left) || gamepad_button_check_pressed(global.GP2_index, gp_padr);
-Forward_Released = keyboard_check_released(vk_left) || gamepad_button_check_released(global.GP2_index, gp_padr);
-Backward_Check = keyboard_check(vk_right) || gamepad_button_check(global.GP2_index, gp_padl);
-Backward_Pressed = keyboard_check_pressed(vk_right) || gamepad_button_check_pressed(global.GP2_index, gp_padl);
-Backward_Released = keyboard_check_released(vk_right) || gamepad_button_check_released(global.GP2_index, gp_padl);
+Forward_Check = keyboard_check(vk_left) || gamepad_button_check(global.GP2_index, gp_padl);
+Forward_Pressed = keyboard_check_pressed(vk_left) || gamepad_button_check_pressed(global.GP2_index, gp_padl);
+Forward_Released = keyboard_check_released(vk_left) || gamepad_button_check_released(global.GP2_index, gp_padl);
+Backward_Check = keyboard_check(vk_right) || gamepad_button_check(global.GP2_index, gp_padr);
+Backward_Pressed = keyboard_check_pressed(vk_right) || gamepad_button_check_pressed(global.GP2_index, gp_padr);
+Backward_Released = keyboard_check_released(vk_right) || gamepad_button_check_released(global.GP2_index, gp_padr);
 Down_Check = keyboard_check(vk_down) || gamepad_button_check(global.GP2_index, gp_padd);
 Down_Pressed = keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(global.GP2_index, gp_padd);
 Down_Released = keyboard_check_released(vk_down) || gamepad_button_check_released(global.GP2_index, gp_padd);

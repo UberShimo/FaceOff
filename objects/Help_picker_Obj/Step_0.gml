@@ -67,6 +67,13 @@ else if(Attack_Pressed){
 	}
 }
 
+if(place_meeting(x, y, Xbox_Icon_Obj)){
+	Xbox_Controls_Obj.visible = true;
+}
+else{
+	Xbox_Controls_Obj.visible = false;
+}
+
 if(Special_Pressed){
 	room_goto(Menu);
 }

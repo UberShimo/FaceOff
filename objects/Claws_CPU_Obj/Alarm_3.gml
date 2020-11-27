@@ -82,3 +82,6 @@ else if(action == "Su"){
 	
 	mask_index = Stand_Hurtbox_Spr;
 }
+
+// Inherit Anti cross up
+event_inherited();

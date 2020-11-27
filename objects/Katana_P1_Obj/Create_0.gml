@@ -12,3 +12,4 @@ blockStunStandingSprite = Katana_BlockStunned_Standing_Spr;
 blockStunCrouchingSprite = Katana_BlockStunned_Ducking_Spr;
 guardBreakSprite = Katana_GuardBreak_Spr;
 deadSprite = Katana_Dead_Spr;
+victorySprite = Katana_Stand_Spr;

@@ -138,3 +138,6 @@ else if(action == "Tiger_Ab"){
 	mask_index = Stand_Hurtbox_Spr;
 	alarm[3] = 16;
 }
+
+// Inherit Anti cross up
+event_inherited();

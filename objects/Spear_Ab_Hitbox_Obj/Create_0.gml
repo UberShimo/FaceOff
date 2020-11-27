@@ -13,4 +13,4 @@ type = "A";
 
 launcher = true;
 hLaunch = 2;
-vLaunch = -3;
+vLaunch = -2.5;

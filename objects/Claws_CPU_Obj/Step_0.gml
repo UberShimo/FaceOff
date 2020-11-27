@@ -67,11 +67,21 @@ if(global.duelHasStarted){
 		sprite_index = Claws_Duck_Spr;
 		mask_index = Duck_Hurtbox_Spr;
 	}
+	else if(action == "none" && !aerial &&
+	!Forward && !Backward){
+		ducking = false;
+	
+		sprite_index = Claws_Stand_Spr;
+		mask_index = Stand_Hurtbox_Spr;
+	}
+	else if(action = "none" && !Down){
+		ducking = false;
+	}
 
 	// Jump
 	if(Up && action = "none" && !ducking && !aerial){
 		if(Forward){
-			hspeed = ms * 1.5;
+			hspeed = ms;
 		}
 		else if(Backward){
 			hspeed = -ms;
@@ -99,6 +109,9 @@ if(global.duelHasStarted){
 			sprite_index = Claws_Block_Standing_Spr;
 			mask_index = Stand_Hurtbox_Spr;
 		}
+	}
+	else{
+		blocking = false;
 	}
 
 
@@ -231,7 +244,7 @@ if(global.duelHasStarted){
 		sprite_index = Claws_An1_Spr;
 		mask_index = Stand_Hurtbox_Spr;
 		image_index = 6;
-		alarm[0] = image_number * 2; 
+		alarm[0] = 32;
 		alarm[3] = 1;
 	}
 	else if(action == "An3" && Attack && image_index == 10){

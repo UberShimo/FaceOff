@@ -11,6 +11,7 @@ blockStunStandingSprite = Mace_BlockStunned_Standing_Spr;
 blockStunCrouchingSprite = Mace_BlockStunned_Ducking_Spr;
 guardBreakSprite = Mace_GuardBreak_Spr;
 deadSprite = Mace_Dead_Spr;
+victorySprite = Mace_Stand_Spr;
 
 parry_H = false;
 parry_L = false;

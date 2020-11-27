@@ -71,3 +71,6 @@ else if(action == "Su"){
 	hitbox = instance_create_depth(x, y, 0, Rapier_Su_Hitbox_Obj);
 	hitbox.spawner = "P1";
 }
+
+// Inherit Anti cross up
+event_inherited();

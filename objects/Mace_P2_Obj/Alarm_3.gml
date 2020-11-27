@@ -77,3 +77,6 @@ else if(action == "Su"){
 else if(action == "parry_H" || action == "parry_L"){
 	Player1_Obj.sprite_index = Player1_Obj.guardBreakSprite;
 }
+
+// Inherit Anti cross up
+event_inherited();

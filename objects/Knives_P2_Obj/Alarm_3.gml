@@ -58,27 +58,47 @@ else if(action == "Sn"){
 // No Sf or Sb to be found here
 
 else if(action == "Sd1"){
+	x -= 6;
+	
 	hitbox = instance_create_depth(x, y, 0, Knives_Sd_Hitbox_Obj);
 	hitbox.spawner = "P2";
 	hitbox.image_xscale = -1;
 	
 	action = "Sd2";
-	hspeed = -ms * 2;
-	alarm[3] = 12;
+	
+	alarm[3] = 8;
 }
 else if(action == "Sd2"){
-	hspeed = 0;
+	x -= 6;
+	
+	hitbox = instance_create_depth(x, y, 0, Knives_Sd_Hitbox_Obj);
+	hitbox.spawner = "P2";
+	hitbox.image_xscale = -1;
+	
+	action = "Sd3";
+	
+	alarm[3] = 8;
+}
+else if(action == "Sd3"){
+	x -= 6;
+	
+	hitbox = instance_create_depth(x, y, 0, Knives_Sd_Hitbox_Obj);
+	hitbox.spawner = "P2";
+	hitbox.image_xscale = -1;
 }
 else if(action == "Su1"){
+	x -= 8;
+	
 	hitbox = instance_create_depth(x, y, 0, Knives_Su_Hitbox_Obj);
 	hitbox.spawner = "P2";
 	hitbox.image_xscale = -1;
 	
 	action = "Su2";
-	hspeed += ms / 2;
 	alarm[3] = 8;
 }
 else if(action == "Su2"){
+	x -= 8;
+	
 	hitbox = instance_create_depth(x, y, 0, Knives_Su_Hitbox_Obj);
 	hitbox.spawner = "P2";
 	hitbox.image_xscale = -1;
@@ -87,6 +107,8 @@ else if(action == "Su2"){
 	alarm[3] = 8;
 }
 else if(action == "Su3"){
+	x -= 8;
+	
 	hitbox = instance_create_depth(x, y, 0, Knives_Su_Hitbox_Obj);
 	hitbox.spawner = "P2";
 	hitbox.image_xscale = -1;
@@ -98,3 +120,6 @@ else if(action == "Su4"){
 	hspeed = 0;
 	mask_index = Stand_Hurtbox_Spr;
 }
+
+// Inherit Anti cross up
+event_inherited();

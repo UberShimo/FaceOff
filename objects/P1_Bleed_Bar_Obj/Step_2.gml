@@ -1,4 +1,5 @@
 x = Player1_Obj.x;
 
-image_xscale = Player1_Obj.bleed/100;
-image_yscale = Player1_Obj.bleed/100;
+// Scale the bleed bar a little smaller than the frame
+image_xscale = Player1_Obj.bleed/120;
+image_yscale = Player1_Obj.bleed/120;
