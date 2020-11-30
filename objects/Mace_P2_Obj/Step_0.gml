@@ -46,10 +46,10 @@ if(global.duelHasStarted){
 	// Jump
 	if(Up_Check && action = "none" && !ducking && !aerial){
 		if(Forward_Check){
-			hspeed = ms;
+			h_speed = ms;
 		}
 		else if(Backward_Check){
-			hspeed = -ms;
+			h_speed = -ms;
 		}
 	
 		aerial = true;
@@ -187,7 +187,7 @@ if(global.duelHasStarted){
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
 				alarm[0] = image_number * 2;
-				alarm[3] = 32;
+				alarm[3] = 40;
 			}
 			else{
 				action = "Sn_start";

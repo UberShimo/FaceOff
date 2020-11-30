@@ -18,7 +18,7 @@ else if(action == "Af"){
 	hitbox1.image_xscale = -1;
 	hitbox2.image_xscale = -1;
 	
-	hspeed = 0;
+	h_speed = 0;
 }
 else if(action == "Ab"){
 	x -= 8;
@@ -74,7 +74,7 @@ else if(action == "Sb"){
 }
 else if(action == "Sd"){
 	if(Forward){
-		instance_create_depth(Player1_Obj.x - 14, Player2_Obj.y, -4, Scythe_AssScratcher_P2_Obj);
+		instance_create_depth(Player1_Obj.x - 16, Player2_Obj.y, -4, Scythe_AssScratcher_P2_Obj);
 	}
 	else if(Backward){
 		instance_create_depth(Player1_Obj.x + 26, Player2_Obj.y, -4, Scythe_AssScratcher_P2_Obj);

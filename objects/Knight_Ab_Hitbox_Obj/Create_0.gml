@@ -1,8 +1,8 @@
 // Inherit the parent event
 event_inherited();
 
-dmg = 30;
-guardDmg = 80;
+dmg = 20;
+guardDmg = 75;
 
 hitStun = global.hitStun_A;
 hitPush = global.hitPush_A;

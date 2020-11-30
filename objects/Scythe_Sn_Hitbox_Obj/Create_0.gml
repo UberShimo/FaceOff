@@ -5,11 +5,11 @@ dmg = 0;
 guardDmg = 10;
 
 hitStun = global.hitStun_B;
-hitPush = global.hitPush_B;
+hitPush = global.hitPush_A;
 blockStun = global.blockStun_A;
 blockPush = global.blockPush_A;
 
 type = "A";
 
-hLaunch = 1;
-vLaunch = -1;
+hLaunch = 2;
+vLaunch = 0;

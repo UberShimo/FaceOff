@@ -54,10 +54,10 @@ if(global.duelHasStarted){
 	// Jump
 	if(Up && action = "none" && !ducking && !aerial){
 		if(Forward){
-			hspeed = ms;
+			h_speed = ms;
 		}
 		else if(Backward){
-			hspeed = -ms;
+			h_speed = -ms;
 		}
 	
 		aerial = true;
@@ -124,12 +124,11 @@ if(global.duelHasStarted){
 				alarm[3] = global.startUp_A;
 			}
 			else if(Backward){
-				action = "Ab1";
+				action = "Ab";
 		
 				sprite_index = Katana_Ab_Spr;
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
-				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_C;
 			}
 			else{
@@ -172,7 +171,7 @@ if(global.duelHasStarted){
 				sprite_index = Katana_TigerDash_Spr;
 				mask_index = Duck_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = ms * 2;
+				h_speed = ms * 2;
 				friction = 0.4;
 				alarm[3] = 12;
 			}
@@ -182,7 +181,7 @@ if(global.duelHasStarted){
 				sprite_index = Katana_Into_Viper_Spr;
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = -ms;
+				h_speed = -ms;
 				alarm[3] = 6;
 			}
 			else{
@@ -240,7 +239,7 @@ if(global.duelHasStarted){
 				sprite_index = Katana_TigerDash_Spr;
 				mask_index = Duck_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = ms * 2;
+				h_speed = ms * 2;
 				friction = 0.4;
 				alarm[3] = 12;
 			}
@@ -250,7 +249,7 @@ if(global.duelHasStarted){
 				sprite_index = Katana_Into_Viper_Spr;
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = -ms;
+				h_speed = -ms;
 				alarm[3] = 6;
 			}
 		}
@@ -273,7 +272,7 @@ if(global.duelHasStarted){
 				sprite_index = Katana_Viper_Ad_Spr;
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = ms;
+				h_speed = ms;
 				alarm[3] = global.startUp_A;
 			}
 			else if(Backward){
@@ -309,7 +308,7 @@ if(global.duelHasStarted){
 				sprite_index = Katana_TigerDash_Spr;
 				mask_index = Duck_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = ms * 2;
+				h_speed = ms * 2;
 				friction = 0.4;
 				alarm[3] = 12;
 			}
@@ -369,7 +368,7 @@ if(global.duelHasStarted){
 				sprite_index = Katana_TigerDash_Spr;
 				mask_index = Duck_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = ms * 2;
+				h_speed = ms * 2;
 				friction = 0.4;
 				alarm[3] = 12;
 			}
@@ -379,7 +378,7 @@ if(global.duelHasStarted){
 				sprite_index = Katana_Into_Viper_Spr;
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = -ms;
+				h_speed = -ms;
 				alarm[3] = 6;
 			}
 			else if(!Down){

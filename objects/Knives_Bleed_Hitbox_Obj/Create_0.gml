@@ -13,6 +13,5 @@ type = "A";
 spawner = "";
 bleed = 0; // Only used for Knives
 
-launcher = false;
 hLaunch = 0;
 vLaunch = 0;

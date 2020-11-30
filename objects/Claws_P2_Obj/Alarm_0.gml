@@ -6,7 +6,7 @@ if(aerial){
 	mask_index = Stand_Hurtbox_Spr;
 	alarm[0] = 4;
 	
-	hspeed = 0;
+	h_speed = 0;
 	aerial = false;
 }
 else{
@@ -21,7 +21,7 @@ else{
 		mask_index = Stand_Hurtbox_Spr;
 	}
 	
-	hspeed = 0;
+	h_speed = 0;
 	friction = 0;
 	blocking = false;
 	action = "none";

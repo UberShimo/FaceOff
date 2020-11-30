@@ -45,10 +45,10 @@ if(global.duelHasStarted){
 	// Jump
 	if(Up_Check && action = "none" && !ducking && !aerial){
 		if(Forward_Check){
-			hspeed = ms;
+			h_speed = ms;
 		}
 		else if(Backward_Check){
-			hspeed = -ms;
+			h_speed = -ms;
 		}
 	
 		aerial = true;
@@ -258,7 +258,7 @@ if(global.duelHasStarted){
 			alarm[3] = global.startUp_A;
 		}
 		else if(Backward_Check){
-			action = "Ab";
+			action = "Ab1";
 		
 			sprite_index = Knives_Ab_Spr;
 			mask_index = Stand_Hurtbox_Spr;

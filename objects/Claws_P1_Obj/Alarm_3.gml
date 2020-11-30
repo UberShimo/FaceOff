@@ -32,7 +32,7 @@ else if(action == "Au"){
 	alarm[3] = 12;
 }
 else if(action == "Au_sit"){
-	hspeed = 0;
+	h_speed = 0;
 }
 else if(action == "Sn"){	
 	fading_away = true;
@@ -40,30 +40,37 @@ else if(action == "Sn"){
 else if(action == "Sf"){
 	hitbox = instance_create_depth(x, y, 0, Claws_Sf_Hitbox_Obj);
 	hitbox.spawner = "P1";
-	hitbox.hspeed = hspeed;
+	hitbox.hspeed = h_speed;
 	action = "Sf_landing";
 	
-	hspeed = ms * 0.5
+	h_speed = ms * 0.5
 	alarm[3] = 16;
 }
 else if(action == "Sf_landing"){
 	aerial = false;
-	hspeed = 0;
+	h_speed = 0;
 	mask_index = Duck_Hurtbox_Spr;
 }
 else if(action == "Sb"){
-	hspeed = 0;
+	h_speed = 0;
 	friction = 0;
 }
 else if(action == "Sb_then_A"){
 	hitbox = instance_create_depth(x, y, 0, Claws_Sd_Hitbox_Obj);
 	hitbox.spawner = "P1";
-	hitbox.hspeed = hspeed;
+	hitbox.hspeed = h_speed;
 	
 	friction = 0.2;
 	mask_index = Duck_Hurtbox_Spr;
 }
-else if(action == "Sd"){
+else if(action == "Sd1"){
+	hitbox = instance_create_depth(x, y, 0, Claws_Sd_Hitbox_Obj);
+	hitbox.spawner = "P1";
+	
+	action = "Sd2";
+	alarm[3] = 16;
+}
+else if(action == "Sd2"){
 	hitbox = instance_create_depth(x, y, 0, Claws_Sd_Hitbox_Obj);
 	hitbox.spawner = "P1";
 }

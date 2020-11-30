@@ -46,14 +46,14 @@ else if(action == "Sf1"){
 	hitbox.image_xscale = -1;
 	
 	action = "Sf2";
-	hspeed = ms / 3;
+	h_speed = ms / 3;
 	alarm[3] = 16;
 }
 else if(action == "Sf2"){
 	hitbox = instance_create_depth(x, y, 0, Knight_Sf2_Hitbox_Obj);
 	hitbox.spawner = "P2";
 	hitbox.image_xscale = -1;
-	hspeed = 0;
+	h_speed = 0;
 }
 else if(action == "Sb"){
 	determination = true;

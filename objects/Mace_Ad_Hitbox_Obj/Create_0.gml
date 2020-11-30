@@ -2,7 +2,7 @@
 event_inherited();
 
 dmg = 12;
-guardDmg = 30;
+guardDmg = 25;
 
 hitStun = global.hitStun_C;
 hitPush = global.hitPush_C;

@@ -2,7 +2,7 @@
 event_inherited();
 
 dmg = 8;
-guardDmg = 16;
+guardDmg = 14;
 bleed = 25;
 
 hitStun = global.hitStun_C;

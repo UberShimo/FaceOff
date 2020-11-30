@@ -4,19 +4,19 @@ if(phrase == "three"){
 	sprite_index = Three_Spr;
 	phrase = "two";
 	
-	alarm[3] = 60;
+	alarm[3] = 30;
 }
 else if(phrase == "two"){
 	sprite_index = Two_Spr;
 	phrase = "one";
 	
-	alarm[3] = 60;
+	alarm[3] = 30;
 }
 else if(phrase == "one"){
 	sprite_index = One_Spr;
 	phrase = "go";
 	
-	alarm[3] = 60;
+	alarm[3] = 30;
 }
 else if(phrase == "go"){
 	sprite_index = GO_Spr;

@@ -104,7 +104,7 @@ else if(action == "Su3"){
 	alarm[3] = 8;
 }
 else if(action == "Su4"){
-	hspeed = 0;
+	h_speed = 0;
 	mask_index = Stand_Hurtbox_Spr;
 }
 

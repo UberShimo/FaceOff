@@ -72,10 +72,10 @@ if(global.duelHasStarted){
 	// Jump
 	if(Up_Check && action = "none" && !ducking && !aerial){
 		if(Forward_Check){
-			hspeed = ms;
+			h_speed = ms;
 		}
 		else if(Backward_Check){
-			hspeed = -ms;
+			h_speed = -ms;
 		}
 	
 		aerial = true;
@@ -124,7 +124,7 @@ if(global.duelHasStarted){
 		// Aerial
 		if(aerial && image_index > 3 && image_index < 6){
 			action = "Au";
-			hspeed = ms;
+			h_speed = ms;
 		
 			sprite_index = Claws_Au_Spr;
 			mask_index = Jump_Hurtbox_Spr;
@@ -189,7 +189,7 @@ if(global.duelHasStarted){
 		// NOT Aerial is needed
 		else if(!aerial){
 			if(ducking){
-				action = "Sd";
+				action = "Sd1";
 		
 				sprite_index = Claws_Sd_Spr;
 				mask_index = Duck_Hurtbox_Spr;
@@ -204,13 +204,13 @@ if(global.duelHasStarted){
 				sprite_index = Claws_Sf_Spr;
 				mask_index = Jump_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = ms;
+				h_speed = ms;
 				alarm[0] = image_number * 2;
 				alarm[3] = global.startUp_B;
 			}
 			else if(Backward_Check){
 				action = "Sb";
-				hspeed = -ms * 3;
+				h_speed = -ms * 3;
 				friction = 0.5;
 		
 				sprite_index = Claws_Sb_Spr;
@@ -271,7 +271,7 @@ if(global.duelHasStarted){
 
 	if(action == "Sb" && Abuffer > 0 && image_index == 9){
 		action = "Sb_then_A";
-		hspeed = ms * 1.5;
+		h_speed = ms * 1.5;
 		
 		sprite_index = Claws_Sb_then_A_Spr;
 		mask_index = Duck_Hurtbox_Spr;
@@ -309,7 +309,12 @@ if(global.duelHasStarted){
 
 // Fading eff
 if(fading_away){
-	image_alpha -= 0.01;
+	if(image_alpha > 0.1){
+		image_alpha -= 0.01;
+	}
+	else{
+		image_alpha -= 0.002;
+	}
 	
 	if(image_alpha <= 0){
 		fading_away = false;
@@ -317,7 +322,12 @@ if(fading_away){
 	}
 }
 else if(fading_back){
-	image_alpha += 0.01;
+	if(image_alpha > 0.1){
+		image_alpha += 0.01;
+	}
+	else{
+		image_alpha += 0.002;
+	}
 	
 	if(image_alpha >= 1){
 		fading_back = false;

@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-dmg = 18;
+dmg = 15;
 guardDmg = 30;
 bleed = 20;
 
@@ -14,4 +14,4 @@ type = "A";
 
 launcher = true;
 hLaunch = 0.2;
-vLaunch = -3;
+vLaunch = -3.2;

@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-dmg = 35;
+dmg = 30;
 guardDmg = 35;
 
 hitStun = global.hitStun_B;
@@ -12,4 +12,4 @@ blockPush = global.blockPush_B;
 type = "D";
 
 hLaunch = 0;
-vLaunch = 1;
+vLaunch = 2;

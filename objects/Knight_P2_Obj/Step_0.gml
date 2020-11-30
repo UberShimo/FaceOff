@@ -45,10 +45,10 @@ if(global.duelHasStarted){
 	// Jump
 	if(Up_Check && action = "none" && !ducking && !aerial){
 		if(Forward_Check){
-			hspeed = ms;
+			h_speed = ms;
 		}
 		else if(Backward_Check){
-			hspeed = -ms;
+			h_speed = -ms;
 		}
 	
 		aerial = true;

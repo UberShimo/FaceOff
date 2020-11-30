@@ -10,20 +10,14 @@ else if(action == "Af"){
 	hitbox = instance_create_depth(x, y, 0, Katana_Af_Hitbox_Obj);
 	hitbox.spawner = "P1";
 }
-else if(action == "Ab1"){
+else if(action == "Ab"){
+	x += 6;
+	
 	hitbox = instance_create_depth(x, y, 0, Katana_Ab_Hitbox_Obj);
 	hitbox.spawner = "P1";
-	action = "Ab2";
-	aerial = true;
+	action = "Into_Eagle";
 	
-	hspeed = ms;
-	friction = 0.1;
-	mask_index = Jump_Hurtbox_Spr;
 	alarm[3] = 16;
-}
-else if(action == "Ab2"){
-	aerial = false;
-	mask_index = Stand_Hurtbox_Spr;
 }
 else if(action == "Ad"){
 	hitbox = instance_create_depth(x, y, 0, Katana_Ad_Hitbox_Obj);
@@ -40,7 +34,7 @@ else if(action == "Into_Eagle"){
 	action = "Eagle";
 	aerial = false;
 	
-	hspeed = 0;
+	h_speed = 0;
 	sprite_index = Katana_Eagle_Spr;
 	mask_index = Stand_Hurtbox_Spr;
 }
@@ -60,7 +54,7 @@ else if(action == "Eagle_Ab"){
 	hitbox.spawner = "P1";
 	
 	action = "Into_Viper";
-	hspeed = -ms;
+	h_speed = -ms;
 	alarm[2] = 6; 
 	alarm[3] = 16;
 }
@@ -68,7 +62,7 @@ else if(action == "Eagle_Ab"){
 else if(action == "Into_Viper"){
 	action = "Viper";
 	
-	hspeed = 0;
+	h_speed = 0;
 	sprite_index = Katana_Viper_Spr;
 	mask_index = Stand_Hurtbox_Spr;
 }
@@ -83,7 +77,7 @@ else if(action == "Viper_Ad1"){
 	hitbox.spawner = "P1";
 	
 	action = "Viper_Ad2";
-	hspeed = 0;
+	h_speed = 0;
 	alarm[3] = 8;
 }
 else if(action == "Viper_Ad2"){
@@ -91,7 +85,7 @@ else if(action == "Viper_Ad2"){
 	hitbox.spawner = "P1";
 	action = "Into_Viper";
 	
-	hspeed = -ms;
+	h_speed = -ms;
 	alarm[2] = 10;
 	alarm[3] = 24;
 }
@@ -107,7 +101,7 @@ else if(action == "Viper_Ab"){
 else if(action == "Into_Tiger"){
 	action = "Tiger";
 	
-	hspeed = 0;
+	h_speed = 0;
 	friction = 0;
 	sprite_index = Katana_Tiger_Spr;
 	mask_index = Duck_Hurtbox_Spr;
@@ -124,8 +118,8 @@ else if(action == "Tiger_Ad"){
 	hitbox = instance_create_depth(x, y, 0, Katana_Tiger_Ad_Hitbox_Obj);
 	hitbox.spawner = "P1";
 	
-	hspeed = ms;
-	hitbox.hspeed = hspeed;
+	h_speed = ms;
+	hitbox.hspeed = h_speed;
 	friction = 0.1;
 }
 else if(action == "Tiger_Ab"){

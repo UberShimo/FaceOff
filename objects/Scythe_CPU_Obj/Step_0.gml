@@ -54,10 +54,10 @@ if(global.duelHasStarted){
 	// Jump
 	if(Up && action = "none" && !ducking && !aerial){
 		if(Forward){
-			hspeed = ms;
+			h_speed = ms;
 		}
 		else if(Backward){
-			hspeed = -ms;
+			h_speed = -ms;
 		}
 	
 		action = "Into_Hover";
@@ -121,12 +121,12 @@ if(global.duelHasStarted){
 	// Scythe AERIAL MOVEMENT
 	if(aerial){
 		// Forward
-		if(Forward && hspeed > ms){
-			hspeed -= 0.2;
+		if(Forward && h_speed > ms){
+			h_speed -= 0.2;
 		}
 		// Back
-		else if(Backward && hspeed < -ms){
-			hspeed += 0.2;
+		else if(Backward && h_speed < -ms){
+			h_speed += 0.2;
 		}
 	}
 
@@ -149,7 +149,7 @@ if(global.duelHasStarted){
 			else if(Forward){
 				action = "Af";
 		
-				hspeed = ms / 2;
+				h_speed = ms / 2;
 				sprite_index = Scythe_Af_Spr;
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;

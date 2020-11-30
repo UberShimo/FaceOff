@@ -1,6 +1,5 @@
 if(other.spawner = "P2" && action != "dead" && action != "rising"){
-	friction = 0;
-	hit = false;
+	hit = false; // Checks if you got properly hit!
 	
 	// Unblockable
 	if(other.penetration == 1){
@@ -14,7 +13,7 @@ if(other.spawner = "P2" && action != "dead" && action != "rising"){
 			mask_index = Stand_Hurtbox_Spr;
 		
 			alarm[0] = other.hitStun;
-			hspeed = other.hitPush;
+			h_speed = other.hitPush;
 			hit = true;
 			audio_play_sound(Hit_snd, 3, false);
 		
@@ -42,7 +41,7 @@ if(other.spawner = "P2" && action != "dead" && action != "rising"){
 			mask_index = Duck_Hurtbox_Spr;
 			
 			alarm[0] = other.blockStun;
-			hspeed = -other.blockPush;
+			h_speed = -other.blockPush;
 				
 			instance_create_depth(x+4, y+18, -2, Block_Eff_Obj);
 			audio_play_sound(Block_snd, 3, false);
@@ -58,7 +57,7 @@ if(other.spawner = "P2" && action != "dead" && action != "rising"){
 				mask_index = Stand_Hurtbox_Spr;
 			
 				alarm[0] = other.hitStun;
-				hspeed = -other.hitPush;
+				h_speed = -other.hitPush;
 				
 				hit = true;
 			}
@@ -80,19 +79,16 @@ if(other.spawner = "P2" && action != "dead" && action != "rising"){
 	}
 	// Aerial
 	else if(aerial){
-		// Remove hitbox below if you do air attack
 		if(other.type != "L"){
 			HP -= other.dmg;
 			
 			// Small dmg like bleed should not stun
 			if(other.hitStun > 0){
 				action = "launched";
-				blocking = false;
 				sprite_index = hitSprite;
 				mask_index = Stand_Hurtbox_Spr;
 			
-				alarm[0] = other.hitStun;
-				hspeed = -other.hitPush;
+				alarm[0] = 0;
 				
 				hit = true;
 			}
@@ -111,7 +107,7 @@ if(other.spawner = "P2" && action != "dead" && action != "rising"){
 			mask_index = Stand_Hurtbox_Spr;
 			
 			alarm[0] = other.blockStun;
-			hspeed = -other.blockPush;
+			h_speed = -other.blockPush;
 			
 			instance_create_depth(x+4, y+8, -2, Block_Eff_Obj);
 			audio_play_sound(Block_snd, 3, false);
@@ -127,7 +123,7 @@ if(other.spawner = "P2" && action != "dead" && action != "rising"){
 				mask_index = Stand_Hurtbox_Spr;
 			
 				alarm[0] = other.hitStun;
-				hspeed = -other.hitPush;
+				h_speed = -other.hitPush;
 				
 				hit = true;
 			}
@@ -148,9 +144,10 @@ if(other.spawner = "P2" && action != "dead" && action != "rising"){
 		}
 	}
 	// Launch logic
-	if((hit && other.launcher) || action = "launched"){
-		hspeed = -other.hLaunch;
+	if((hit && other.launcher) || (action = "launched" && other.hitStun > 0)){
+		h_speed = -other.hLaunch;
 		vspeed = other.vLaunch;
+		friction = 0;
 		gravity_direction = -90;
 		gravity = global.gravityValue;
 		sprite_index = launchSprite;
@@ -158,6 +155,7 @@ if(other.spawner = "P2" && action != "dead" && action != "rising"){
 		alarm[0] = 0;
 		
 		action = "launched";
+		aerial = true;
 	}
 	
 	// Interrupt hitbox outcome
@@ -182,35 +180,39 @@ if(other.spawner = "P2" && action != "dead" && action != "rising"){
 		action = "stunned";
 		sprite_index = guardBreakSprite;
 		mask_index = Stand_Hurtbox_Spr;
-		alarm[0] = 120;
-	}
-
-	// DEAD
-	if(HP <= 0){
-		HP = 0;
-	
-		if(!place_free(x, y+1)){
-			action = "dead";
-			sprite_index = deadSprite;
-			mask_index = Duck_Hurtbox_Spr;
-			image_index = 0;
-			alarm[0] = 0;
-			alarm[9] = (image_number * 2) -1;
-			gravity = 0;
-			hspeed = 0;
-			vspeed = 0;
-		}
+		alarm[0] = 80;
 	}
 }
-else if(action = "rising" && other.hitStun > 0){
+else if(action = "rising"){
 	HP -= other.dmg;
-	action = "stunned";
-	sprite_index = hitSprite;
-	mask_index = Stand_Hurtbox_Spr;
-		
-	alarm[0] = global.hitStun_C;
-	hspeed = -2;
 	
-	audio_play_sound(Hit_snd, 3, false);
-	instance_create_depth(x+4, y+12, -2, Hit_Eff_Obj);
+	// Small dmg like bleed should not stun
+	if(other.hitStun > 0){
+		action = "stunned";
+		sprite_index = hitSprite;
+		mask_index = Stand_Hurtbox_Spr;
+		
+		alarm[0] = global.hitStun_C;
+		h_speed = -2;
+		
+		audio_play_sound(Hit_snd, 3, false);
+		instance_create_depth(x+4, y+12, -2, Hit_Eff_Obj);
+	}
+}
+
+// DEAD
+if(HP <= 0){
+	HP = 0;
+	
+	if(!place_free(x, y+1)){
+		action = "dead";
+		sprite_index = deadSprite;
+		mask_index = Duck_Hurtbox_Spr;
+		image_index = 0;
+		alarm[0] = 0;
+		alarm[9] = (image_number * 2) -1;
+		gravity = 0;
+		h_speed = 0;
+		vspeed = 0;
+	}
 }

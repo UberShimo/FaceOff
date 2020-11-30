@@ -45,10 +45,10 @@ if(global.duelHasStarted){
 	// Jump
 	if(Up_Check && action = "none" && !ducking && !aerial){
 		if(Forward_Check){
-			hspeed = ms;
+			h_speed = ms;
 		}
 		else if(Backward_Check){
-			hspeed = -ms;
+			h_speed = -ms;
 		}
 	
 		aerial = true;
@@ -131,7 +131,7 @@ if(global.duelHasStarted){
 				sprite_index = Rapier_Ab_Spr;
 				mask_index = Stand_Hurtbox_Spr;
 				image_index = 0;
-				hspeed = -ms;
+				h_speed = -ms;
 				alarm[0] = image_number * 2;
 				alarm[2] = 10;
 				alarm[3] = global.startUp_C;
@@ -170,7 +170,7 @@ if(global.duelHasStarted){
 				mask_index = Duck_Hurtbox_Spr;
 				image_index = 0;
 				alarm[0] = image_number * 2;
-				alarm[3] = global.startUp_B;
+				alarm[3] = global.startUp_A;
 			}
 			else if(Forward_Check){
 				action = "Sf";

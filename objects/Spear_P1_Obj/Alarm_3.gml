@@ -89,7 +89,7 @@ else if(action == "Sf3"){
 	hitbox.spawner = "P1";
 }
 else if(action == "Sb"){
-	hspeed = -ms;
+	h_speed = -ms;
 	
 	hitbox = instance_create_depth(x, y, 0, Spear_Sb_Hitbox_Obj);
 	hitbox.spawner = "P1";

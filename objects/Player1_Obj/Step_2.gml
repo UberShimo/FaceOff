@@ -12,10 +12,8 @@ if(Dbuffer > 0){
 }
 
 
-// Anti cross up
-if(x > Player2_Obj.x -10 && hspeed > 0){
-	hspeed = 0;
-}
-while(x > Player2_Obj.x -8){
+// This may be unnecessary
+// Anti cross up and fix so you cant get out of bounds on wrong side
+while(x > Player2_Obj.x -8 || x > room_width - 32){
 	x -= 2;
 }

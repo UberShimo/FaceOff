@@ -54,10 +54,10 @@ if(global.duelHasStarted){
 	// Jump
 	if(Up && action = "none" && !ducking && !aerial){
 		if(Forward){
-			hspeed = ms;
+			h_speed = ms;
 		}
 		else if(Backward){
-			hspeed = -ms;
+			h_speed = -ms;
 		}
 	
 		aerial = true;
@@ -149,7 +149,7 @@ if(global.duelHasStarted){
 		// Aerial
 		if(aerial && image_index > 3 && image_index < 6){
 			action = "Su";
-			hspeed = -1;
+			h_speed = -1;
 		
 			sprite_index = Spear_Su_Spr;
 			mask_index = Jump_Hurtbox_Spr;

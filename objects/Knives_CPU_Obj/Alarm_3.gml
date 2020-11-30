@@ -89,7 +89,7 @@ else if(action == "Su1"){
 	hitbox.image_xscale = -1;
 	
 	action = "Su2";
-	hspeed += ms / 2;
+	h_speed += ms / 2;
 	alarm[3] = 8;
 }
 else if(action == "Su2"){
@@ -109,7 +109,7 @@ else if(action == "Su3"){
 	alarm[3] = 8;
 }
 else if(action == "Su4"){
-	hspeed = 0;
+	h_speed = 0;
 	mask_index = Stand_Hurtbox_Spr;
 }
 

@@ -1,7 +1,7 @@
 gravity = 0;
-hspeed = 0;
+h_speed = 0;
 vspeed = 0;
-
+aerial = false;
 
 if(HP > 0){
 	action = "rising";
@@ -18,7 +18,7 @@ else{
 	alarm[0] = 0;
 	alarm[9] = (image_number * 2) -1;
 	gravity = 0;
-	hspeed = 0;
+	h_speed = 0;
 	vspeed = 0;
 }
 

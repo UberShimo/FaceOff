@@ -2,7 +2,7 @@
 event_inherited();
 
 dmg = 10;
-guardDmg = 35;
+guardDmg = 50;
 
 hitStun = global.hitStun_A;
 hitPush = global.hitPush_A;
@@ -12,5 +12,5 @@ blockPush = global.blockPush_A;
 type = "H";
 
 launcher = true;
-hLaunch = 0;
-vLaunch = 0;
+hLaunch = 2;
+vLaunch = -1;

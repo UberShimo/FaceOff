@@ -1,13 +1,12 @@
 GAME NAME: Face off
 
 TODO{
-	Attacks miss sometimes. Donnu why ;_;
-	Launching mid air fucks up sometimes.
-	Killed my bleed midair fucks you up?
-	After launcher you cant launch with normal attack.
-
-	Comment away TEST HITBOXES in Match_Controller
+	Sometime.. Somewhere.. You get launched but you have friction for some reason. Fucking it all up.
+	Attacks goes through opponent sometimes. Also the character acts as if it didnt do the attack. Hmm... Escpacially happens on Katana Ab.
 }
+
+DONT USE:	hspeed
+Instead:	h_speed
 
 Text settings:
 Arial / Bold italic
@@ -42,7 +41,7 @@ Sprite speed shall be 30!
 Rise: 16
 
 start:
-10 / 16 / 24 / (32)
+10 / 16 / 24 / (32 - 40)
 
 recovery:
 (24) / 32 / 40 / 48

@@ -19,9 +19,9 @@ global.blockStun_B = 28;
 global.blockStun_C = 20;
 global.blockStun_D = 12; // Rarely used
 
-global.hitPush_A = 0; // launch
-global.hitPush_B = 2;
-global.hitPush_C = 1;
+global.hitPush_A = 3;
+global.hitPush_B = 1.5;
+global.hitPush_C = 0.5;
 
 global.blockPush_A = 3;
 global.blockPush_B = 2;

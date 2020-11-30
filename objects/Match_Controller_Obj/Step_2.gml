@@ -11,8 +11,8 @@ if(!someoneHasDied && (Player1_Obj.HP <= 0 || Player2_Obj.HP <= 0)){
 	
 	phrase = "three";
 	
-	alarm[0] = 240;
-	alarm[3] = 300;
+	alarm[0] = 120;
+	alarm[3] = 180;
 	
 	// Someone wins
 	if(P1_score == 3 || P2_score == 3){
