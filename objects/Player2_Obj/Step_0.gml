@@ -8,18 +8,18 @@ Backward_Released = keyboard_check_released(vk_right) || gamepad_button_check_re
 Down_Check = keyboard_check(vk_down) || gamepad_button_check(global.GP2_index, gp_padd);
 Down_Pressed = keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(global.GP2_index, gp_padd);
 Down_Released = keyboard_check_released(vk_down) || gamepad_button_check_released(global.GP2_index, gp_padd);
-Up_Check = keyboard_check(vk_up) || gamepad_button_check(global.GP2_index, gp_padu);
-Up_Pressed = keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(global.GP2_index, gp_padu);
-Up_Released = keyboard_check_released(vk_up) || gamepad_button_check_released(global.GP2_index, gp_padu);
+Up_Check = keyboard_check(vk_up) || gamepad_button_check(global.GP2_index, gp_padu) || gamepad_button_check(global.GP2_index, gp_face1);
+Up_Pressed = keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(global.GP2_index, gp_padu) || gamepad_button_check_pressed(global.GP2_index, gp_face1);
+Up_Released = keyboard_check_released(vk_up) || gamepad_button_check_released(global.GP2_index, gp_padu) || gamepad_button_check_released(global.GP2_index, gp_face1);
 Attack_Check = keyboard_check(vk_numpad1) || gamepad_button_check(global.GP2_index, gp_face3);
 Attack_Pressed = keyboard_check_pressed(vk_numpad1) || gamepad_button_check_pressed(global.GP2_index, gp_face3);
 Attack_Released = keyboard_check_released(vk_numpad1) || gamepad_button_check_released(global.GP2_index, gp_face3);
 Special_Check = keyboard_check(vk_numpad2) || gamepad_button_check(global.GP2_index, gp_face4);
 Special_Pressed = keyboard_check_pressed(vk_numpad2) || gamepad_button_check_pressed(global.GP2_index, gp_face4);;
 Special_Released = keyboard_check_released(vk_numpad2) || gamepad_button_check_released(global.GP2_index, gp_face4);;
-Block_Check = keyboard_check(vk_numpad3) || gamepad_button_check(global.GP2_index, gp_face1);
-Block_Pressed = keyboard_check_pressed(vk_numpad3) || gamepad_button_check_pressed(global.GP2_index, gp_face1);
-Block_Released = keyboard_check_released(vk_numpad3) || gamepad_button_check_released(global.GP2_index, gp_face1);
+Block_Check = keyboard_check(vk_numpad3) || gamepad_button_check(global.GP2_index, gp_face2);
+Block_Pressed = keyboard_check_pressed(vk_numpad3) || gamepad_button_check_pressed(global.GP2_index, gp_face2);
+Block_Released = keyboard_check_released(vk_numpad3) || gamepad_button_check_released(global.GP2_index, gp_face2);
 
 
 // Buffer activate
