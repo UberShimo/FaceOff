@@ -5,9 +5,9 @@ dmg = 15;
 guardDmg = 45;
 
 hitStun = global.hitStun_B;
-hitPush = global.hitPush_B;
+hitPush = global.hitPush_A;
 blockStun = global.blockStun_B;
-blockPush = global.blockPush_B;
+blockPush = global.blockPush_A;
 
 type = "H";
 

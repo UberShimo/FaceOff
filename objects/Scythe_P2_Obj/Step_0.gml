@@ -121,14 +121,14 @@ if(global.duelHasStarted){
 	}
 	
 	// Scythe AERIAL MOVEMENT
-	if(aerial){
+	if(aerial && action != "launched"){
 		// Forward
 		if(Forward_Check && h_speed > ms){
-			h_speed -= 0.2;
+			h_speed -= 0.1;
 		}
 		// Back
 		else if(Backward_Check && h_speed < -ms){
-			h_speed += 0.2;
+			h_speed += 0.1;
 		}
 	}
 

@@ -9,7 +9,7 @@ if(global.duelHasStarted){
 	if(Forward &&
 	action = "none" && !blocking && !aerial && !ducking){
 		if(x > Player1_Obj.x +11){
-			x += ms * 1.5;
+			x += ms;
 		}
 	 
 		sprite_index = Claws_Move_F_Spr;
