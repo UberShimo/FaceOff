@@ -1,7 +1,7 @@
 GAME NAME: Face off
 
 TODO{
-	Choose with "A" in title on controller.
+	Sometimes you get hit in air and you start to fly!
 	Fix loading screen, icon and general stuff for uploading your game.
 
 	Sometime.. Somewhere.. You get launched but you have friction for some reason. Fucking it all up.
@@ -14,7 +14,7 @@ Instead:	h_speed / v_speed
 Text settings:
 Arial / Bold italic
 size: 6
-,0
+
 Room size: 256 x 128
 
 Hitbox types:

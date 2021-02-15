@@ -48,7 +48,7 @@ if(global.duelHasStarted){
 			h_speed = ms;
 		}
 		else if(Backward_Check){
-			h_speed = -lb_disp_time_ms;
+			h_speed = -ms;
 		}
 	
 		aerial = true;
