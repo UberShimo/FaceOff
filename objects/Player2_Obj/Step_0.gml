@@ -76,6 +76,16 @@ if(!Player1_Obj.HP > 0 && HP > 0 && action == "none"){
 	sprite_index = victorySprite;
 }
 
+// Guard recoverer
+if(guard < maxGuard){
+	if(blocking){
+		guard += 0.1;
+	}
+	else{
+		guard += 0.4;
+	}
+}
+
 // Bleed logic (Knives relevant)
 if(bleed > 0 && bleed < 100){
 	bleed -= 0.15;

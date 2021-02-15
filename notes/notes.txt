@@ -1,6 +1,7 @@
 GAME NAME: Face off
 
 TODO{
+	Choose with "A" in title on controller.
 	Fix loading screen, icon and general stuff for uploading your game.
 
 	Sometime.. Somewhere.. You get launched but you have friction for some reason. Fucking it all up.

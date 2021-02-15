@@ -273,13 +273,3 @@ if(global.duelHasStarted){
 if(Player2_Obj.bleed >= 100 && alarm[8] <= 0 && Player2_Obj.HP > 0){
 	alarm[8] = 6;
 }
-
-// Guard recoverer
-if(guard < maxGuard){
-	if(blocking){
-		guard += 0.1;
-	}
-	else{
-		guard += 0.5;
-	}
-}

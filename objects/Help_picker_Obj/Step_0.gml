@@ -1,4 +1,4 @@
-if(Backward_Pressed){
+if(Left_Pressed){
 	if(place_free(x-24, y)){
 		x -= 24;
 	}
@@ -8,7 +8,7 @@ if(Backward_Pressed){
 		}
 	}
 }
-else if(Forward_Pressed){
+else if(Right_Pressed){
 	if(place_free(x+24, y)){
 		x += 24;
 	}
@@ -38,7 +38,7 @@ else if(Down_Pressed){
 		}
 	}
 }
-else if(Attack_Pressed){
+else if(Choose_Pressed){
 	audio_play_sound(Pick_snd, 1, false);
 	
 	if(place_meeting(x, y, Knight_Icon_Obj)){
@@ -74,6 +74,6 @@ else{
 	Xbox_Controls_Obj.visible = false;
 }
 
-if(Special_Pressed){
+if(Back_Pressed){
 	room_goto(Menu);
 }

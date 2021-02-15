@@ -1,6 +1,7 @@
 if(other.spawner = "P1"){
-	if(determination && (action != "none" || action != "stunned") && !blocking){
+	if(determination && action != "none" && action != "stunned" && !blocking){
 		HP -= other.dmg;
+		Spawn_Hit_Eff(self, other.type);
 	
 		determination = false;
 	

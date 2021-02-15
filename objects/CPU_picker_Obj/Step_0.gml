@@ -1,5 +1,5 @@
 if(canChoose){
-	if(Backward_Pressed){
+	if(Left_Pressed){
 		if(place_free(x-24, y)){
 			x -= 24;
 		}
@@ -9,7 +9,7 @@ if(canChoose){
 			}
 		}
 	}
-	else if(Forward_Pressed){
+	else if(Right_Pressed){
 		if(place_free(x+24, y)){
 			x += 24;
 		}
@@ -39,7 +39,7 @@ if(canChoose){
 			}
 		}
 	}
-	else if(Attack_Pressed){
+	else if(Choose_Pressed){
 		audio_play_sound(Pick_snd, 1, false);
 		
 		if(place_meeting(x, y, Random_Icon_Obj)){
@@ -72,11 +72,11 @@ if(canChoose){
 	}
 }
 
-if(Special_Pressed){
+if(Back_Pressed){
 	global.CPU_pick = noone;
 	canChoose = false;
 }
-else if(Attack_Pressed){
+else if(Choose_Pressed){
 	alarm[0] = 4;
 }
 

@@ -1,5 +1,5 @@
 if(global.P2_pick == noone){
-	if(Backward_Pressed){
+	if(Right_Pressed){
 		if(place_free(x+24, y)){
 			x += 24;
 		}
@@ -9,7 +9,7 @@ if(global.P2_pick == noone){
 			}
 		}
 	}
-	else if(Forward_Pressed){
+	else if(Left_Pressed){
 		if(place_free(x-24, y)){
 			x -= 24;
 		}
@@ -39,7 +39,7 @@ if(global.P2_pick == noone){
 			}
 		}
 	}
-	else if(Attack_Pressed){
+	else if(Choose_Pressed){
 		audio_play_sound(Pick_snd, 1, false);
 		
 		if(place_meeting(x, y, Random_Icon_Obj)){
@@ -71,7 +71,7 @@ if(global.P2_pick == noone){
 		}
 	}
 }
-else if(Special_Pressed){
+else if(Back_Pressed){
 	global.P2_pick = noone;
 }
 

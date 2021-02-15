@@ -416,14 +416,3 @@ if(global.duelHasStarted){
 		alarm[3] = 1;
 	}
 }
-
-
-// Guard recoverer
-if(guard < maxGuard){
-	if(blocking){
-		guard += 0.1;
-	}
-	else{
-		guard += 0.5;
-	}
-}

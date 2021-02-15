@@ -333,14 +333,3 @@ else if(fading_back){
 		fading_back = false;
 	}
 }
-
-
-// Guard recoverer
-if(guard < maxGuard){
-	if(blocking){
-		guard += 0.1;
-	}
-	else{
-		guard += 0.5;
-	}
-}

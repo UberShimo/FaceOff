@@ -233,14 +233,3 @@ if(determination){
 		instance_create_depth(x, y, 5, Determination_Eff_Obj);
 	}
 }
-
-
-// Guard recoverer
-if(guard < 130){
-	if(blocking){
-		guard += 0.1;
-	}
-	else{
-		guard += 0.5;
-	}
-}

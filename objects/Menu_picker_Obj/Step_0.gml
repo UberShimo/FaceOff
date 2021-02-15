@@ -18,7 +18,7 @@ else if(Down_Pressed){
 		}
 	}
 }
-else if(Attack_Pressed){
+else if(Choose_Pressed){
 	audio_play_sound(Pick_snd, 1, false);
 	
 	if(place_meeting(x, y, PvP_Option_Obj)){
