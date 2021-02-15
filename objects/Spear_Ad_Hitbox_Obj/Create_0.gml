@@ -5,7 +5,7 @@ dmg = 10;
 guardDmg = 8;
 
 hitStun = global.hitStun_D;
-hitPush = global.hitPush_C;
+hitPush = global.hitPush_B;
 blockStun = global.blockStun_D;
 blockPush = global.blockPush_C;
 

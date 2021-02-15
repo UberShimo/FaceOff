@@ -31,6 +31,7 @@ global.blockPush_C = 0;
 global.bufferAmount = 12;
 global.hitboxDuration = 4;
 global.gravityValue = 0.15;
+global.worldSpeed = 1;
 
 // Picks
 global.P1_pick = noone;

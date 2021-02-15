@@ -8,7 +8,7 @@ if(global.duelHasStarted){
 	if(Forward &&
 	action = "none" && !blocking && !aerial && !ducking){
 		if(x > Player1_Obj.x +10){
-			x += ms;
+			x += ms * global.worldSpeed;
 		}
 	 
 		sprite_index = Knives_Move_F_Spr;
@@ -17,7 +17,7 @@ if(global.duelHasStarted){
 	// Back
 	else if(Backward &&
 	action = "none" && !blocking && !aerial && !ducking){
-		x -= ms;
+		x -= ms * global.worldSpeed;
 		
 		// CPU check
 		if(place_meeting(x+16, y, OutOfBounds_Obj)){

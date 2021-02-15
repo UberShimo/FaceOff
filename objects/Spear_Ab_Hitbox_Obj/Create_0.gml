@@ -8,6 +8,7 @@ hitStun = global.hitStun_A;
 hitPush = global.hitPush_A;
 blockStun = global.blockStun_B;
 blockPush = global.blockPush_B;
+hitPause = 8;
 
 type = "A";
 

@@ -18,19 +18,7 @@ if(other.spawner = "P1" && action != "dead" && action != "rising"){
 			hit = true;
 			
 			audio_play_sound(Hit_snd, 3, false);
-			
-			if(other.type = "H"){
-				instance_create_depth(x-4, y+8, -2, Hit_Eff_Obj);
-			}
-			else if(other.type = "L"){
-				instance_create_depth(x-4, y+18, -2, Hit_Eff_Obj);
-			}
-			else if(other.type = "D"){
-				instance_create_depth(x-4, y+8, -2, Hit_Eff_Obj);
-			}
-			else{
-				instance_create_depth(x-4, y+12, -2, Hit_Eff_Obj);
-			}
+			Spawn_Hit_Eff(self, other.type);
 		}
 	}
 	// Ducking
@@ -64,19 +52,7 @@ if(other.spawner = "P1" && action != "dead" && action != "rising"){
 				hit = true;
 			}
 			audio_play_sound(Hit_snd, 3, false);
-			
-			if(other.type = "H"){
-				instance_create_depth(x-4, y+8, -2, Hit_Eff_Obj);
-			}
-			else if(other.type = "L"){
-				instance_create_depth(x-4, y+18, -2, Hit_Eff_Obj);
-			}
-			else if(other.type = "D"){
-				instance_create_depth(x-4, y+8, -2, Hit_Eff_Obj);
-			}
-			else{
-				instance_create_depth(x-4, y+12, -2, Hit_Eff_Obj);
-			}
+			Spawn_Hit_Eff(self, other.type);
 		}
 	}
 	// Aerial
@@ -130,28 +106,14 @@ if(other.spawner = "P1" && action != "dead" && action != "rising"){
 				hit = true;
 			}
 			audio_play_sound(Hit_snd, 3, false);
-			
-			if(other.type = "H"){
-				instance_create_depth(x-4, y+8, -2, Hit_Eff_Obj);
-			}
-			else if(other.type = "L"){
-				instance_create_depth(x-4, y+18, -2, Hit_Eff_Obj);
-			}
-			else if(other.type = "D"){
-				instance_create_depth(x-4, y+8, -2, Hit_Eff_Obj);
-			}
-			else{
-				instance_create_depth(x-4, y+12, -2, Hit_Eff_Obj);
-			}
+			Spawn_Hit_Eff(self, other.type);
 		}
 	}
 	// Launch logic
 	if((hit && other.launcher) || (action = "launched" && other.hitStun > 0)){
 		h_speed = other.hLaunch;
-		vspeed = other.vLaunch;
+		v_speed = other.vLaunch;
 		friction = 0;
-		gravity_direction = -90;
-		gravity = global.gravityValue;
 		sprite_index = launchSprite;
 		mask_index = Duck_Hurtbox_Spr;
 		alarm[0] = 0;
@@ -212,9 +174,9 @@ if(HP <= 0){
 		mask_index = Duck_Hurtbox_Spr;
 		image_index = 0;
 		alarm[0] = 0;
-		alarm[9] = (image_number * 2) -1;
-		gravity = 0;
+		alarm[3] = 0;
+		alarm[9] = 8;
 		h_speed = 0;
-		vspeed = 0;
+		v_speed = 0;
 	}
 }

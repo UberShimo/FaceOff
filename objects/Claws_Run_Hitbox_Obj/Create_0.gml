@@ -8,6 +8,7 @@ hitStun = 0;
 hitPush = 0;
 blockStun = 1;
 blockPush = 0;
+hitPause = 2;
 
 type = "L";
 

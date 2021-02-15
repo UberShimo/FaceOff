@@ -1,6 +1,5 @@
-gravity = 0;
 h_speed = 0;
-vspeed = 0;
+v_speed = 0;
 aerial = false;
 
 if(HP > 0){
@@ -16,10 +15,7 @@ else{
 	sprite_index = deadSprite;
 	mask_index = Duck_Hurtbox_Spr;
 	alarm[0] = 0;
-	alarm[9] = (image_number * 2) -1;
-	gravity = 0;
-	h_speed = 0;
-	vspeed = 0;
+	alarm[9] = 8;
 }
 
 move_contact_solid(-90, -1);

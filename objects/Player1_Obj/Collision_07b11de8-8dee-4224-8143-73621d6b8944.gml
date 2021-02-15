@@ -1,8 +1,6 @@
 if!(action = "launched"){
 	h_speed = -2;
-	vspeed = 0;
-	gravity_direction = -90;
-	gravity = global.gravityValue;
+	v_speed = 0;
 	
 	sprite_index = launchSprite;
 	action = "launched";

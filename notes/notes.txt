@@ -1,17 +1,19 @@
 GAME NAME: Face off
 
 TODO{
+	Fix loading screen, icon and general stuff for uploading your game.
+
 	Sometime.. Somewhere.. You get launched but you have friction for some reason. Fucking it all up.
 	Attacks goes through opponent sometimes. Also the character acts as if it didnt do the attack. Hmm... Escpacially happens on Katana Ab.
 }
 
-DONT USE:	hspeed
-Instead:	h_speed
+DONT USE:	hspeed / vspeed
+Instead:	h_speed / v_speed
 
 Text settings:
 Arial / Bold italic
 size: 6
-
+,0
 Room size: 256 x 128
 
 Hitbox types:

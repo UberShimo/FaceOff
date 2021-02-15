@@ -2,6 +2,7 @@ HP = 100;
 guard = 100;
 maxGuard = 100;
 h_speed = 0; // My own speed controller
+v_speed = 0; // My own speed controller
 ms = 1.5; // Movement Speed
 
 blocking = false;

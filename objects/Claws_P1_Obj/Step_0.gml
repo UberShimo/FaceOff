@@ -9,7 +9,7 @@ if(global.duelHasStarted){
 	if(Forward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
 		if(x < Player2_Obj.x -11){
-			x += ms;
+			x += ms * global.worldSpeed;
 		}
 	 
 		sprite_index = Claws_Move_F_Spr;
@@ -22,7 +22,7 @@ if(global.duelHasStarted){
 	// Back
 	else if(Backward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
-		x -= ms;
+		x -= ms * global.worldSpeed;
 	
 		sprite_index = Claws_Move_B_Spr;
 		mask_index = Stand_Hurtbox_Spr;
@@ -35,7 +35,7 @@ if(global.duelHasStarted){
 	// Limbo walk Forward
 	else if(Forward_Check &&
 	action = "none" && !blocking && !aerial && x < Player2_Obj.x -10){
-		x += ms * 0.5;
+		x += (ms * 0.5) * global.worldSpeed;
 	 
 		sprite_index = Claws_Duck_Move_Spr;
 		mask_index = Duck_Hurtbox_Spr;
@@ -43,7 +43,7 @@ if(global.duelHasStarted){
 	// Limbo walk Back
 	else if(Backward_Check &&
 	action = "none" && !blocking && !aerial){
-		x -= ms * 0.5;
+		x -= (ms * 0.5) * global.worldSpeed;
 	 
 		sprite_index = Claws_Duck_Move_Spr;
 		mask_index = Duck_Hurtbox_Spr;

@@ -927,6 +927,14 @@
             }
         },
         {
+            "Key": "2b403f3f-c018-43d4-88da-1c28eeaa2927",
+            "Value": {
+                "id": "fc8a8919-e505-4ad3-8040-36132543eecc",
+                "resourcePath": "sprites\\Knight_Rise_Spr\\Knight_Rise_Spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2bb341bb-8653-439c-9a0a-3b24294615af",
             "Value": {
                 "id": "4d6c0498-d164-4cdf-b24c-cd91230fb1d8",
@@ -1172,6 +1180,14 @@
                 "id": "3999d151-73bc-4ae4-a755-97b19c68f4e6",
                 "resourcePath": "sprites\\P1_Picker_Spr\\P1_Picker_Spr.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "395fe11a-be47-4b23-86ae-a364864432ca",
+            "Value": {
+                "id": "4bf42eba-ab58-4244-a5d0-e7c0ea83dee1",
+                "resourcePath": "scripts\\Spawn_Hit_Eff\\Spawn_Hit_Eff.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1727,6 +1743,14 @@
             }
         },
         {
+            "Key": "5586b6d2-6980-4389-9167-57661ef6ecf2",
+            "Value": {
+                "id": "0967c6a6-2bea-49e0-bea0-73cc74b975ed",
+                "resourcePath": "sprites\\Hit_Eff2_Spr\\Hit_Eff2_Spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "55982182-0207-4af0-a100-2f5c80a1887c",
             "Value": {
                 "id": "7711d645-e97c-4000-aa4e-ad900dc80ee9",
@@ -1739,6 +1763,14 @@
             "Value": {
                 "id": "3206d6fb-5565-4a4f-ab99-7dfb152834b8",
                 "resourcePath": "objects\\Exit_Option_Obj\\Exit_Option_Obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "561dd138-98c0-4a9b-8737-e2dd209be42e",
+            "Value": {
+                "id": "57e2756e-79a3-436d-96fc-4a7985d094e4",
+                "resourcePath": "objects\\Hit_Eff2_Obj\\Hit_Eff2_Obj.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2236,6 +2268,14 @@
                 "id": "85809a81-4f54-423e-979f-0ee7e304acc7",
                 "resourcePath": "sprites\\OutOfBound_Spr\\OutOfBound_Spr.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6541f15f-b49a-4761-ab26-af5c7c6915d2",
+            "Value": {
+                "id": "d1591b72-c3cb-438e-8971-65a64c4d96df",
+                "resourcePath": "views\\6541f15f-b49a-4761-ab26-af5c7c6915d2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3563,6 +3603,14 @@
             "Value": {
                 "id": "4270ad91-99b4-4835-9caf-fc99fde70955",
                 "resourcePath": "objects\\P2_Bleed_Bar_Obj\\P2_Bleed_Bar_Obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a6464393-9d22-4d9c-9895-98fe949f3520",
+            "Value": {
+                "id": "0e50693c-75cb-46d8-972d-4f46d20ea070",
+                "resourcePath": "objects\\Block_Eff2_Obj\\Block_Eff2_Obj.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -5031,6 +5079,14 @@
             }
         },
         {
+            "Key": "e953c5fc-5daf-48ae-91c7-d5cb6e2633a4",
+            "Value": {
+                "id": "647c537b-1a67-4b86-82f9-98abfec36255",
+                "resourcePath": "sprites\\Block_Eff2_Spr\\Block_Eff2_Spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e959921a-bbae-460a-a649-629ff63abde1",
             "Value": {
                 "id": "beadeac6-9937-48c6-8a51-4042c1ce0d96",
@@ -5107,14 +5163,6 @@
             "Value": {
                 "id": "bc747b0c-9fcb-4ad2-bf7d-7962871ffbb7",
                 "resourcePath": "sprites\\Scythe_Hit_Spr\\Scythe_Hit_Spr.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "ecfbc430-4bbf-49c1-96ae-2b9df2367475",
-            "Value": {
-                "id": "6725179e-0228-4652-a13a-840a006b7f1b",
-                "resourcePath": "sprites\\Knight_Rise_Spr\\Knight_Rise_Spr.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5488,7 +5536,8 @@
         }
     ],
     "script_order": [
-        "3ecef478-2ced-44e7-812a-7df88d234894"
+        "3ecef478-2ced-44e7-812a-7df88d234894",
+        "395fe11a-be47-4b23-86ae-a364864432ca"
     ],
     "tutorial": ""
 }

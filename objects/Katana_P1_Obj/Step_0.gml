@@ -8,7 +8,7 @@ if(global.duelHasStarted){
 	if(Forward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
 		if(x < Player2_Obj.x -10){
-			x += ms;
+			x += ms * global.worldSpeed;
 		}
 	 
 		sprite_index = Katana_Move_F_Spr;
@@ -17,7 +17,7 @@ if(global.duelHasStarted){
 	// Back
 	else if(Backward_Check &&
 	action = "none" && !blocking && !aerial && !ducking){
-		x -= ms;
+		x -= ms * global.worldSpeed;
 	
 		sprite_index = Katana_Move_B_Spr;
 		mask_index = Stand_Hurtbox_Spr;
@@ -48,7 +48,7 @@ if(global.duelHasStarted){
 			h_speed = ms;
 		}
 		else if(Backward_Check){
-			h_speed = -ms;
+			h_speed = -lb_disp_time_ms;
 		}
 	
 		aerial = true;

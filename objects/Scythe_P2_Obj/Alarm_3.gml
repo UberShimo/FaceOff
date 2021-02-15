@@ -23,18 +23,12 @@ else if(action == "Af"){
 else if(action == "Ab"){
 	x -= 8;
 	
-	hitbox = instance_create_depth(x, y, 0, Scythe_Ab_Hitbox_Obj);
-	hitbox.spawner = "P2";
-	hitbox.image_xscale = -1;
-	
-	action = "Ab_tip";
-	alarm[3] = 1;
-}
-// Delayed hitbox needed so that hitboxes get checked in correct order
-else if(action == "Ab_tip"){
-	hitbox = instance_create_depth(x, y, 0, Scythe_Ab_tip_Hitbox_Obj);
-	hitbox.spawner = "P2";
-	hitbox.image_xscale = -1;
+	hitbox1 = instance_create_depth(x, y, 0, Scythe_Ab_tip_Hitbox_Obj);
+	hitbox2 = instance_create_depth(x, y, 0, Scythe_Ab_Hitbox_Obj);
+	hitbox1.spawner = "P2";
+	hitbox2.spawner = "P2";
+	hitbox1.image_xscale = -1;
+	hitbox2.image_xscale = -1;
 }
 else if(action == "Ad1"){
 	hitbox = instance_create_depth(x, y, 0, Scythe_Ad1_Hitbox_Obj);

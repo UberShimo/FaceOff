@@ -64,6 +64,13 @@ else{
 	depth = -1;
 }
 
+// worldSpeed relation
+image_speed = global.worldSpeed;
+alarm[0] += 1 - global.worldSpeed;
+alarm[2] += 1 - global.worldSpeed;
+alarm[3] += 1 - global.worldSpeed;
+alarm[9] += 1 - global.worldSpeed;
+
 // Victory sprite
 if(!Player2_Obj.HP > 0 && HP > 0 && action == "none"){
 	sprite_index = victorySprite;

@@ -5,6 +5,7 @@ hitStun = 0;
 hitPush = 0;
 blockStun = 0;
 blockPush = 0;
+hitPause = 4;
 
 type = "";
 spawner = "";
