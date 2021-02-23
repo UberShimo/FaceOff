@@ -23,4 +23,7 @@ if(action == "launched"){
 }
 else{
 	v_speed = 0;
+	if(!place_free(x, y+1)){
+		move_contact_solid(-90, -1);
+	}
 }

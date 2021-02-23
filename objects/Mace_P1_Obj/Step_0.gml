@@ -232,7 +232,7 @@ if(global.duelHasStarted){
 	
 	// An cancel
 	if(action == "An1" && image_index < 2){
-		if(Block_Check){
+		if(Block_Pressed){
 			action = "none";
 		}
 		else if(Forward_Check){

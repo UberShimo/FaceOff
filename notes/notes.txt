@@ -1,11 +1,12 @@
 GAME NAME: Face off
 
+(?) = unsure
 TODO{
-	Sometimes you get hit in air and you start to fly!
 	Fix loading screen, icon and general stuff for uploading your game.
 
-	Sometime.. Somewhere.. You get launched but you have friction for some reason. Fucking it all up.
-	Attacks goes through opponent sometimes. Also the character acts as if it didnt do the attack. Hmm... Escpacially happens on Katana Ab.
+	(?) Sometimes you get hit in air and you start to fly! (Badly fixed atm)
+	(?) Sometime.. Somewhere.. You get launched but you have friction for some reason. Fucking it all up.
+	(?)	Attacks goes through opponent sometimes. Also the character acts as if it didnt do the attack. Hmm... Escpacially happens on Katana Ab.
 }
 
 DONT USE:	hspeed / vspeed

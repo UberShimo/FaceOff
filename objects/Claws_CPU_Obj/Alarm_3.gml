@@ -62,7 +62,7 @@ else if(action == "Sb"){
 	friction = 0;
 }
 else if(action == "Sb_then_A"){
-	hitbox = instance_create_depth(x, y, 0, Claws_Sd_Hitbox_Obj);
+	hitbox = instance_create_depth(x, y, 0, Claws_Sb_Hitbox_Obj);
 	hitbox.spawner = "P2";
 	hitbox.hspeed = h_speed;
 	hitbox.image_xscale = -1;
